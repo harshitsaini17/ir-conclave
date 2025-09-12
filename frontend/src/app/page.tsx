@@ -1,99 +1,201 @@
-import React from 'react';
-import MemberCard from '@/components/MemberCard';
-import PanelMemberCard from '@/components/PanelMemberCard';
+import React from 'react'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import MemberCard from '@/components/MemberCard'
+import PanelMemberCard from '@/components/PanelMemberCard'
+import Carousel from '@/components/Carousel'
+import WelcomeMessage from '@/components/WelcomeMessage'
 
 const IITInternationalRelationsConclave = () => {
+  // Panel Members Data
   const panelMembers = [
     {
       name: 'Professor Avinash Kumar Agarwal',
       role: 'Director, IIT Jodhpur',
-      image: '/images/panel/avinash-agarwal.jpg'
+      image: '/images/p1.jpg'
     },
     {
       name: 'Dr. Ankur Gupta',
-      role: 'Dean of International Relations (DOIR)',
-      image: '/images/panel/ankur-gupta.jpg'
+      role: 'Dean of International Relations (DOIR), IIT Jodhpur',
+      image: '/images/p2.jpg'
     },
     {
       name: 'Dr. Bhivraj Suthar',
-      role: 'Associate Dean International Connect (ADIC)',
-      image: '/images/panel/bhivraj-suthar.jpg'
+      role: 'Associate Dean International Connect (ADIC), IIT Jodhpur',
+      image: '/images/p3.jpg'
     }
   ];
 
   const participants = [
-    { name: 'Shikha Sinha', role: 'Senior Advisor- International Cooperation, DAAD Regional Office, New Delhi' },
-    { name: 'Apoorv Mahendru', role: 'Deputy Director and Head -- Marketing, DAAD Regional Office, New Delhi' },
-    { name: 'Nibedita Dey', role: 'Assistant Manager, International Relations, IIT Palakkad' },
-    { name: 'Dr. Deepak Sharma', role: 'Department of Mechanical Engineering, IIT Guwahati' },
-    { name: 'Prof. Anandaroop Bhattacharya', role: 'Dean, International Relations, IIT Kharagpur' },
-    { name: 'KOUSHIKI MUKHERJEE', role: 'International Relations Executive, IIT Kharagpur' },
-    { name: 'Arup Kumar Roy', role: 'Jr. International Relations Executive, IIT Kharagpur' },
-    { name: 'Prof. Vimal Chandra Srivastava', role: 'Dean, International Relations, IIT Roorkee' },
-    { name: 'Waseem Akhtar', role: 'Project Assistant (Admin), IIT Roorkee' },
-    { name: 'Pramod Joshi', role: 'Project Assistant (Admin), IIT Roorkee' },
-    { name: 'Prof. Santosh K Singh', role: 'PIC, International Relations, IIT BHU' },
-    { name: 'Prof. Tanmoy Maity', role: 'Associate Dean (International Relations & Alumni Affairs), IIT ISM, Dhanbad' },
-    { name: 'Mritunjay Sharma', role: 'Assistant Registrar, International Relations & Alumni Affairs, IIT ISM, Dhanbad' },
-    { name: 'Dr. Jayaramulu Kolleboyina', role: 'Dean (International Relations), IIT Jammu' },
-    { name: 'Dr. Angshuman Kapil', role: 'Associate Dean (International Relations), IIT Jammu' },
-    { name: 'Prof. Raghunathan Rengaswamy', role: 'Dean, Global Engagement, IIT Madras' },
-    { name: 'Dr. Anil Verma', role: 'Dean, International Programmes, IIT Delhi' },
-    { name: 'Prof. Sudarshan Kumar', role: 'Dean (International Relations), IIT Bombay' },
-    { name: 'Piyush Kumar', role: 'Junior Administrative Assistant, Office of International Relations, IIT Bombay' },
-    { name: 'Prof. Rohit Sharma', role: 'Dean (International Relations), IIT Ropar' },
-    { name: 'Lokesh', role: 'Junior Assistant, Office of International Relations, IIT Kanpur' },
-    { name: 'Dr. Sharad Sinha', role: 'Head, International Relations, IIT GOA' },
-    { name: 'Haritha Addepalli', role: 'Junior Assistant, Office of International and Alumni Affairs, IIT Tirupati' },
-    { name: 'Amit Kumar Goswami', role: 'Junior Superintendent, Office of International and Alumni Affairs, IIT Tirupati' },
-    { name: 'Prof. Satinder Kumar Sharma', role: 'Head, International Relations Division (IRD), IIT Mandi' },
-    { name: 'Chandan Sharma', role: 'Senior Superintendent, Office of International Relations, IIT Mandi' },
-    { name: 'Prof. Prabhat Kumar Upadhyay', role: 'Dean of International Relations, IIT Indore' },
-    { name: 'Mohib Rahim', role: 'Executive Officer -- Academics, Office of International Relations, IIT Indore' },
-    { name: 'Vinay Kumar', role: 'Junior Superintendent, Office of International Relations, IIT Indore' },
-    { name: 'Dr. Nutan Kumar Tomar', role: 'Associate Dean, Resource, IIT Patna' }
-  ];
+    {
+      name: 'Dr Sanjeev Kumar Varshney',
+      role: 'Former Adviser & Head, International Scientific Cooperation, Department of Science & Technology, Government of India',
+      image: '/images/4.png'
+    },
+  {
+    name: 'Shikha Sinha',
+    role: 'Senior Advisor- International Cooperation, DAAD Regional Office, New Delhi',
+    image: '/images/5.jpg'
+  },
+  {
+    name: 'Apoorv Mahendru',
+    role: 'Deputy Director and Head -- Marketing, DAAD Regional Office, New Delhi',
+    image: '/images/7.jpg'
+  },
+  {
+    name: 'Ms. Nibedita Dey',
+    role: 'Assistant Manager, International Relations, IIT Palakkad',
+    image: '/images/9.jpg'
+  },
+  {
+    name: 'Dr. Deepak Sharma',
+    role: 'Department of Mechanical Engineering, IIT Guwahati',
+    image: '/images/11.jpg'
+  },
+  {
+    name: 'Prof. Anandaroop Bhattacharya',
+    role: 'Dean, International Relations, IIT Kharagpur',
+    image: '/images/13.jpg'
+  },
+  {
+    name: 'Ms. Koushiki Mukherjee',
+    role: 'International Relations Executive, IIT Kharagpur',
+    image: '/images/15.jpg'
+  },
+  {
+    name: 'Mr. Arup Kumar Roy',
+    role: 'Jr. International Relations Executive, IIT Kharagpur',
+    image: '/images/17.jpg'
+  },
+  {
+    name: 'Prof. Vimal Chandra Srivastava',
+    role: 'Dean, International Relations, IIT Roorkee',
+    image: '/images/20.jpg'
+  },
+  {
+    name: 'Mr. Waseem Akhtar',
+    role: 'Project Assistant (Admin), IIT Roorkee',
+    image: '/images/21.jpg'
+  },
+  {
+    name: 'Mr. Pramod Joshi',
+    role: 'Project Assistant (Admin), IIT Roorkee',
+    image: '/images/24.jpg'
+  },
+  {
+    name: 'Prof. Santosh K Singh',
+    role: 'PIC, International Relations, IIT BHU, Varanasi',
+    image: '/images/26.jpg'
+  },
+  {
+    name: 'Prof. Tanmoy Maity',
+    role: 'Associate Dean (International Relations & Alumni Affairs), IIT ISM, Dhanbad',
+    image: '/images/27.jpg'
+  },
+  {
+    name: 'Mr. Mritunjay Sharma',
+    role: 'Assistant Registrar, International Relations & Alumni Affairs, IIT ISM, Dhanbad',
+    image: '/images/30.jpg'
+  },
+  {
+    name: 'Dr. Jayaramulu Kolleboyina',
+    role: 'Dean (International Relations), IIT Jammu',
+    image: '/images/31.jpg'
+  },
+  {
+    name: 'Dr. Angshuman Kapil',
+    role: 'Associate Dean (International Relations), IIT Jammu',
+    image: '/images/33.jpg'
+  },
+  {
+    name: 'Dr. Anil Verma',
+    role: 'Dean, International Programmes, IIT Delhi',
+    image: '/images/35.jpg'
+  },
+  {
+    name: 'Prof. Sudarshan Kumar',
+    role: 'Dean (International Relations), IIT Bombay',
+    image: '/images/37.jpg'
+  },
+  {
+    name: 'Ms. Chandrika Naik',
+    role: 'MoU Lead and Coordinator for Outgoing students, Office of International Relations, IIT Bombay',
+    image: '/images/40.jpg'
+  },
+  {
+    name: 'Prof. Rohit Sharma',
+    role: 'Dean (International Relations), IIT Ropar',
+    image: '/images/41.jpg'
+  },
+  {
+    name: 'Mr. Lokesh',
+    role: 'Junior Assistant, Office of International Relations, IIT Kanpur',
+    image: '/images/43.jpg'
+  },
+  {
+    name: 'Dr. Sharad Sinha',
+    role: 'Head, International Relations, IIT Goa',
+    image: '/images/45.jpg'
+  },
+  {
+    name: 'Ms. Haritha Addepalli',
+    role: 'Junior Assistant, Office of International and Alumni Affairs, IIT Tirupati',
+    image: '/images/47.jpg'
+  },
+  {
+    name: 'Mr. Amit Kumar Goswami',
+    role: 'Junior Superintendent, Office of International and Alumni Affairs, IIT Tirupati',
+    image: '/images/49.jpg'
+  },
+  {
+    name: 'Prof. Satinder Kumar Sharma',
+    role: 'Head, International Relations Division (IRD), IIT Mandi',
+    image: '/images/51.jpg'
+  },
+  {
+    name: 'Ms. Chandan Sharma',
+    role: 'Senior Superintendent, Office of International Relations, IIT Mandi',
+    image: '/images/53.jpg'
+  },
+  {
+    name: 'Prof. Prabhat Kumar Upadhyay',
+    role: 'Dean of International Relations, IIT Indore',
+    image: '/images/55.jpg'
+  },
+  {
+    name: 'Mr. Mohib Rahim',
+    role: 'Executive Officer -- Academics, Office of International Relations, IIT Indore',
+    image: '/images/56.jpg'
+  },
+  {
+    name: 'Mr. Vinay Kumar',
+    role: 'Junior Superintendent, Office of International Relations, IIT Indore',
+    image: '/images/59.jpg'
+  },
+  {
+    name: 'Dr. Nutan Kumar Tomar',
+    role: 'Associate Dean, Resource, IIT Patna',
+    image: '/images/61.jpg'
+  }
+];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex items-center space-x-4">
-            <div className="flex space-x-2">
-              <img src="/images/iit-jodhpur-logo.jpg" alt="IIT Jodhpur" className="h-16 w-16" />
-              <img src="/images/iit-logo.jpg" alt="IIT" className="h-16 w-16" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">
-                All IITs International Relations Conclave - 2025
-              </h1>
-              <p className="text-lg text-gray-600 mt-1">
-                Indian Institute of Technology Jodhpur
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 py-3">
-          <nav className="flex space-x-6">
-            <a href="#" className="hover:text-blue-200">Home Page</a>
-            <a href="#" className="hover:text-blue-200">Visit IIT Jodhpur</a>
-            <a href="#" className="hover:text-blue-200">Travel Guidelines to Jodhpur</a>
-            <a href="#" className="hover:text-blue-200">IIT Jodhpur on Google Map</a>
-            <a href="#" className="hover:text-blue-200">Contact Us</a>
-          </nav>
-        </div>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 py-8 space-y-12">
+      <Navbar />
+      <Carousel />
+      
+      {/* Welcome Section */}
+      <WelcomeMessage />
+      
+      <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Panel Members Section */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Panel Members</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <section id="panel-members" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            Organizing Panel
+          </h2>
+          
+          {/* Panel member cards */}
+          <div className="space-y-8">
             {panelMembers.map((member, index) => (
               <PanelMemberCard key={index} member={member} />
             ))}
@@ -101,17 +203,23 @@ const IITInternationalRelationsConclave = () => {
         </section>
 
         {/* Participants Section */}
-        <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Participants</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section id="participants">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            Distinguished Participants
+          </h2>
+          
+          {/* Grid layout for participants - 2-3 per row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {participants.map((member, index) => (
               <MemberCard key={index} member={member} />
             ))}
           </div>
         </section>
       </div>
-    </div>
-  );
-};
 
-export default IITInternationalRelationsConclave;
+      <Footer />
+    </div>
+  )
+}
+
+export default IITInternationalRelationsConclave
