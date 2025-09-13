@@ -112,72 +112,72 @@ const IITInternationalRelationsConclave = () => {
   {
     name: 'Dr. Anil Verma',
     role: 'Dean, International Programmes, IIT Delhi',
-    image: '/images/35.jpg'
+    image: '/images/37.jpg'
   },
   {
     name: 'Prof. Sudarshan Kumar',
     role: 'Dean (International Relations), IIT Bombay',
-    image: '/images/37.jpg'
+    image: '/images/40.jpg'
   },
   {
     name: 'Ms. Chandrika Naik',
     role: 'MoU Lead and Coordinator for Outgoing students, Office of International Relations, IIT Bombay',
-    image: '/images/40.jpg'
+    image: '/images/m1.png'
   },
   {
     name: 'Prof. Rohit Sharma',
     role: 'Dean (International Relations), IIT Ropar',
-    image: '/images/41.jpg'
+    image: '/images/43.jpg'
   },
   {
     name: 'Mr. Lokesh',
     role: 'Junior Assistant, Office of International Relations, IIT Kanpur',
-    image: '/images/43.jpg'
+    image: '/images/45.jpg'
   },
   {
     name: 'Dr. Sharad Sinha',
     role: 'Head, International Relations, IIT Goa',
-    image: '/images/45.jpg'
+    image: '/images/47.jpg'
   },
   {
     name: 'Ms. Haritha Addepalli',
     role: 'Junior Assistant, Office of International and Alumni Affairs, IIT Tirupati',
-    image: '/images/47.jpg'
+    image: '/images/49.jpg'
   },
   {
     name: 'Mr. Amit Kumar Goswami',
     role: 'Junior Superintendent, Office of International and Alumni Affairs, IIT Tirupati',
-    image: '/images/49.jpg'
+    image: '/images/51.jpg'
   },
   {
     name: 'Prof. Satinder Kumar Sharma',
     role: 'Head, International Relations Division (IRD), IIT Mandi',
-    image: '/images/51.jpg'
+    image: '/images/53.jpg'
   },
   {
     name: 'Ms. Chandan Sharma',
     role: 'Senior Superintendent, Office of International Relations, IIT Mandi',
-    image: '/images/53.jpg'
+    image: '/images/55.jpg'
   },
   {
     name: 'Prof. Prabhat Kumar Upadhyay',
     role: 'Dean of International Relations, IIT Indore',
-    image: '/images/55.jpg'
+    image: '/images/56.jpg'
   },
   {
     name: 'Mr. Mohib Rahim',
     role: 'Executive Officer -- Academics, Office of International Relations, IIT Indore',
-    image: '/images/56.jpg'
+    image: '/images/59.jpg'
   },
   {
     name: 'Mr. Vinay Kumar',
     role: 'Junior Superintendent, Office of International Relations, IIT Indore',
-    image: '/images/59.jpg'
+    image: '/images/61.jpg'
   },
   {
     name: 'Dr. Nutan Kumar Tomar',
     role: 'Associate Dean, Resource, IIT Patna',
-    image: '/images/61.jpg'
+    image: '/images/62.jpg'
   }
 ];
 
@@ -264,7 +264,7 @@ const IITInternationalRelationsConclave = () => {
           </div>
         </section>
       </div>
-      
+
       <GoogleMapLocation />
 
       <ContactUs />

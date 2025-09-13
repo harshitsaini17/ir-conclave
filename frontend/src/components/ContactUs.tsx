@@ -30,7 +30,7 @@ const ContactUs = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50/50 via-blue-50/50 to-indigo-100/50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,rgba(183,224,255,0.1),transparent)]"></div>
       <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
