@@ -72,7 +72,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
 
   return (
     <motion.div 
-      className="w-full rounded-2xl overflow-hidden mb-8 group cursor-pointer"
+      className="w-full rounded-2xl overflow-hidden mb-4 group cursor-pointer"
       style={{
         background: 'rgba(255, 255, 255, 0.4)',
         backdropFilter: 'blur(20px)',
@@ -100,7 +100,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
       <div className="flex relative z-10">
         {/* Left Image Section */}
         <motion.div 
-          className="w-1/3 h-64 relative flex-shrink-0 overflow-hidden"
+          className="w-1/3 h-48 relative flex-shrink-0 overflow-hidden"
           variants={imageVariants}
         >
           <motion.div
@@ -170,7 +170,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
 
         {/* Right Content Section */}
         <motion.div 
-          className="w-2/3 py-6 relative flex items-center"
+          className="w-2/3 py-4 relative flex items-center"
           variants={contentVariants}
         >
           <div className="relative w-full h-full flex items-center">
@@ -194,12 +194,12 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
 
             {/* Content with enhanced styling */}
             <motion.div 
-              className="relative z-10 p-8 w-full"
+              className="relative z-10 p-5 w-full"
               whileHover={{ x: 5 }}
               transition={{ duration: 0.3 }}
             >
               <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-4 leading-tight font-exo2"
+                className="text-lg lg:text-xl font-bold mb-3 leading-tight font-exo2"
                 style={{
                   background: 'linear-gradient(135deg, #1f2937, #374151)',
                   backgroundClip: 'text',
@@ -228,7 +228,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
               />
               
               <motion.p 
-                className="text-lg text-gray-700 leading-relaxed font-quicksand"
+                className="text-sm lg:text-base text-gray-700 leading-relaxed font-quicksand"
                 whileHover={{ color: '#4b5563' }}
                 transition={{ duration: 0.3 }}
               >

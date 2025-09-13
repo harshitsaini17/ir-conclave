@@ -250,9 +250,9 @@ const IITInternationalRelationsConclave = () => {
             Distinguished Participants
           </h2>
           
-          {/* Full-width cards, one per line */}
+          {/* Grid layout for 3 cards per row */}
           <div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
           >
             {participants.map((member, index) => (
               <div
