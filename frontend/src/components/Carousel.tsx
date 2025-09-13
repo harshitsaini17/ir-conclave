@@ -165,11 +165,11 @@ const Carousel = () => {
               ease: [0.4, 0, 0.2, 1]
             }}
             style={{
-              background: 'linear-gradient(135deg, #ffffff, #0C2E8A, #F5E9DC)',
+              background: '#0C2E8A',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
-              filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))'
+              // filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.5))'
             }}
           >
             {fixedContent.title}
@@ -189,7 +189,7 @@ const Carousel = () => {
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
-              filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.5))'
+              // filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.5))'
             }}
           >
             {fixedContent.subtitle}
@@ -205,7 +205,7 @@ const Carousel = () => {
               delay: 0.4
             }}
             style={{
-              filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.7))'
+              // filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.7))'
             }}
           >
             {fixedContent.description}
