@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { Instagram, Twitter, LinkedIn, Facebook } from 'lucide-react'
+import { Instagram } from 'lucide-react'
 
 const Footer = () => {
   const containerVariants = {
