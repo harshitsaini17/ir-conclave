@@ -264,10 +264,11 @@ const IITInternationalRelationsConclave = () => {
           </div>
         </section>
       </div>
+      
+      <GoogleMapLocation />
 
       <ContactUs />
 
-      <GoogleMapLocation />
 
       <Footer />
     </div>

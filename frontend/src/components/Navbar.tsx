@@ -23,9 +23,10 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', href: '#home', id: 'home' },
-    { label: 'Visit IIT Jodhpur', href: 'https://iitj.ac.in/main/en/iitj', id: 'visit' },
-    { label: 'Travel Guidelines to Jodhpur', href: 'https://iitj.ac.in/main/en/how-to-reach-iit-jodhpur', id: 'travel' },
-    { label: 'IIT Jodhpur on Google Map', href: '#location', id: 'map' },
+    { label: 'Visit IITJ', href: 'https://iitj.ac.in/main/en/iitj', id: 'visit' },
+    { label: 'Travel Guidelines', href: 'https://iitj.ac.in/main/en/how-to-reach-iit-jodhpur', id: 'travel' },
+    { label: 'IITJ on Google Map', href: '#location', id: 'map' },
+    { label: 'Student Handbook', href: 'https://drive.google.com/file/d/1E7ZZ9ot-d7JyCvGLGOT4yB8mRcvOt5Z2/view', id: 'about' },
     { label: 'Contact Us', href: '#contact', id: 'contact' },
   ]
 
@@ -61,8 +62,8 @@ const Navbar = () => {
       }`}
       style={{
         background: isScrolled 
-          ? 'rgba(183, 224, 255, 0.15)' 
-          : 'rgba(255, 245, 205, 0.25)',
+          ? 'rgba(183, 224, 255, 0.75)' 
+          : 'rgba(255, 245, 205, 0.15)',
         backdropFilter: 'blur(20px)',
         borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
       }}

@@ -136,15 +136,15 @@ body {
 
 /* Glass morphism effects */
 .glass {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.65);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.48);
 }
 
 .glass-dark {
-  background: rgba(30, 41, 59, 0.25);
+  background: rgba(30, 41, 59, 0.65);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* Smooth scrolling */
