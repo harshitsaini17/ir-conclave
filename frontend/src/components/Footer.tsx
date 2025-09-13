@@ -46,7 +46,7 @@ const Footer = () => {
       <motion.div 
         className="absolute top-0 left-0 w-full h-1"
         style={{
-          background: 'linear-gradient(90deg, #B7E0FF, #FFF5CD, #FFCFB3, #E78F81, #B7E0FF)'
+          background: 'linear-gradient(90deg, #B7E0FF, #FEFFC4, #FFDE63, #FFBC4C, #B7E0FF)'
         }}
         animate={{
           backgroundPosition: ['0%', '100%']
@@ -64,7 +64,7 @@ const Footer = () => {
           key={i}
           className="absolute w-1.5 h-1.5 rounded-full opacity-15"
           style={{
-            background: i % 3 === 0 ? '#B7E0FF' : i % 3 === 1 ? '#FFCFB3' : '#E78F81',
+            background: i % 3 === 0 ? '#B7E0FF' : i % 3 === 1 ? '#FFDE63' : '#FFBC4C',
             left: `${25 + i * 20}%`,
             top: `${15 + (i % 2) * 25}%`
           }}
@@ -103,7 +103,7 @@ const Footer = () => {
               <motion.div
                 className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
                 style={{
-                  background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)'
+                  background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)'
                 }}
               />
               
@@ -118,7 +118,7 @@ const Footer = () => {
                     <motion.div 
                       className="relative h-12 w-12 rounded-full p-1 shadow-md"
                       style={{
-                        background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3)'
+                        background: 'linear-gradient(135deg, #B7E0FF, #FFDE63)'
                       }}
                       whileHover={{ 
                         scale: 1.05,
@@ -140,7 +140,7 @@ const Footer = () => {
                     <motion.h3 
                       className="text-lg font-bold text-white mb-1 leading-tight font-exo2"
                       whileHover={{
-                        background: 'linear-gradient(135deg, #B7E0FF, #E78F81)',
+                        background: 'linear-gradient(135deg, #B7E0FF, #FFBC4C)',
                         backgroundClip: 'text',
                         color: 'transparent'
                       }}
@@ -174,9 +174,9 @@ const Footer = () => {
                 >
                   {[
                     { icon: "twitter", label: "Twitter", color: "#B7E0FF", link: "https://x.com/iitjodhpur" },
-                    { icon: "linkedin", label: "LinkedIn", color: "#FFCFB3", link: "https://www.linkedin.com/school/iitjodhpur" },
-                    { icon: "facebook", label: "Facebook", color: "#E78F81", link: "https://www.facebook.com/IITJOfficial/" },
-                    { icon: "instagram", label: "Instagram", color: "#E78F81", link: "https://www.instagram.com/iitj_official_account/" },
+                    { icon: "linkedin", label: "LinkedIn", color: "#FFDE63", link: "https://www.linkedin.com/school/iitjodhpur" },
+                    { icon: "facebook", label: "Facebook", color: "#FFBC4C", link: "https://www.facebook.com/IITJOfficial/" },
+                    { icon: "instagram", label: "Instagram", color: "#FFBC4C", link: "https://www.instagram.com/iitj_official_account/" },
                     
                   ].map((social, index) => (
                     <motion.a 
@@ -251,7 +251,7 @@ const Footer = () => {
                 <motion.span 
                   className="w-1 h-6 rounded-full mr-3"
                   style={{
-                    background: 'linear-gradient(180deg, #B7E0FF, #E78F81)'
+                    background: 'linear-gradient(180deg, #B7E0FF, #FFBC4C)'
                   }}
                   animate={{
                     height: [24, 28, 24]
@@ -267,9 +267,9 @@ const Footer = () => {
               <ul className="space-y-2">
                 {[
                   { label: 'Home', href: '#home', color: '#B7E0FF' },
-                  { label: 'Welcome', href: '#welcome', color: '#FFF5CD' },
-                  { label: 'Panel Members', href: '#panel', color: '#FFCFB3' },
-                  { label: 'Participants', href: '#participants', color: '#E78F81' },
+                  { label: 'Welcome', href: '#welcome', color: '#FEFFC4' },
+                  { label: 'Panel Members', href: '#panel', color: '#FFDE63' },
+                  { label: 'Participants', href: '#participants', color: '#FFBC4C' },
                   { label: 'International Student Handbook', href: 'https://drive.google.com/file/d/1E7ZZ9ot-d7JyCvGLGOT4yB8mRcvOt5Z2/view', color: '#B7E0FF' }
                 ].map((link, index) => (
                   <motion.li 
@@ -326,7 +326,7 @@ const Footer = () => {
                 <motion.div 
                   className="w-2 h-2 rounded-full"
                   style={{
-                    background: 'linear-gradient(45deg, #B7E0FF, #E78F81)'
+                    background: 'linear-gradient(45deg, #B7E0FF, #FFBC4C)'
                   }}
                   animate={{
                     scale: [1, 1.1, 1],
@@ -362,7 +362,7 @@ const Footer = () => {
                     <motion.span 
                       className="absolute bottom-0 left-0 h-0.5 rounded-full"
                       style={{
-                        background: 'linear-gradient(90deg, #B7E0FF, #E78F81)'
+                        background: 'linear-gradient(90deg, #B7E0FF, #FFBC4C)'
                       }}
                       initial={{ width: 0 }}
                       whileHover={{ width: '100%' }}

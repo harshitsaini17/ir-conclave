@@ -94,7 +94,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
       <motion.div
         className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-3xl"
         style={{
-          background: 'linear-gradient(135deg, #B7E0FF 0%, #FFF5CD 25%, #FFCFB3 75%, #E78F81 100%)',
+          background: 'linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 25%, #FFDE63 75%, #FFBC4C 100%)',
           filter: 'blur(20px)'
         }}
       />
@@ -108,7 +108,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
           <motion.div
             className="w-full h-full rounded-l-3xl overflow-hidden relative"
             style={{
-              background: 'linear-gradient(135deg, #B7E0FF 0%, #FFCFB3 100%)',
+              background: 'linear-gradient(135deg, #B7E0FF 0%, #FFDE63 100%)',
               padding: '3px'
             }}
             whileHover={{ scale: 1.05 }}
@@ -133,7 +133,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
                 <motion.div 
                   className="w-full h-full flex items-center justify-center"
                   style={{
-                    background: 'linear-gradient(135deg, #FFF5CD, #FFCFB3)'
+                    background: 'linear-gradient(135deg, #FEFFC4, #FFDE63)'
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
@@ -212,7 +212,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
             
             <motion.div
               className="absolute bottom-4 right-16 w-2 h-2 rounded-full opacity-40"
-              style={{ background: '#E78F81' }}
+              style={{ background: '#FFBC4C' }}
               animate={{
                 y: [0, 10, 0],
                 opacity: [0.4, 0.8, 0.4]
@@ -240,7 +240,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
                   color: 'transparent'
                 }}
                 whileHover={{
-                  background: 'linear-gradient(135deg, #E78F81, #B7E0FF)',
+                  background: 'linear-gradient(135deg, #FFBC4C, #B7E0FF)',
                   backgroundClip: 'text',
                   // WebkitBackgroundClip: 'text',
                   color: 'transparent'
@@ -253,7 +253,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
               <motion.div
                 className="w-16 h-1.5 mb-5 rounded-full"
                 style={{
-                  background: 'linear-gradient(90deg, #B7E0FF, #FFCFB3, #E78F81)'
+                  background: 'linear-gradient(90deg, #B7E0FF, #FFDE63, #FFBC4C)'
                 }}
                 initial={{ width: 0 }}
                 whileInView={{ width: 64 }}
@@ -281,8 +281,8 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
                     className="w-2.5 h-2.5 rounded-full"
                     style={{
                       background: i === 0 ? '#B7E0FF' : 
-                                  i === 1 ? '#FFF5CD' : 
-                                  i === 2 ? '#FFCFB3' : '#E78F81'
+                                  i === 1 ? '#FEFFC4' : 
+                                  i === 2 ? '#FFDE63' : '#FFBC4C'
                     }}
                     animate={{
                       scale: [1, 1.6, 1],

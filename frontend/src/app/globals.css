@@ -6,14 +6,14 @@
   
   /* Custom Color Palette from ColorHunt */
   --theme-primary: #B7E0FF;      /* Light blue */
-  --theme-secondary: #FFF5CD;    /* Light cream */
-  --theme-accent: #FFCFB3;       /* Light peach */
-  --theme-tertiary: #E78F81;     /* Coral pink */
+  --theme-secondary: #FEFFC4;    /* Light cream */
+  --theme-accent: #FFDE63;       /* Light peach */
+  --theme-tertiary: #FFBC4C;     /* Coral pink */
   
   /* Gradient backgrounds */
-  --gradient-primary: linear-gradient(135deg, #B7E0FF 0%, #FFF5CD 100%);
-  --gradient-secondary: linear-gradient(135deg, #FFF5CD 0%, #FFCFB3 100%);
-  --gradient-accent: linear-gradient(135deg, #FFCFB3 0%, #E78F81 100%);
+  --gradient-primary: linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 100%);
+  --gradient-secondary: linear-gradient(135deg, #FEFFC4 0%, #FFDE63 100%);
+  --gradient-accent: linear-gradient(135deg, #FFDE63 0%, #FFBC4C 100%);
 }
 
 /* Custom theme colors for Tailwind */
@@ -49,7 +49,7 @@
 }
 
 body {
-  /* background: linear-gradient(135deg, #B7E0FF 0%, #FFF5CD 30%, #FFCFB3 70%, #E78F81 100%); */
+  /* background: linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 30%, #FFDE63 70%, #FFBC4C 100%); */
   background-attachment: fixed;
   /* color: var(--foreground); */
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
@@ -162,19 +162,19 @@ html {
 
 /* Custom gradient utilities */
 .bg-gradient-theme {
-  background: linear-gradient(135deg, #B7E0FF 0%, #FFF5CD 50%, #FFCFB3 100%);
+  background: linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 50%, #FFDE63 100%);
 }
 
 .bg-gradient-primary {
-  background: linear-gradient(135deg, #B7E0FF 0%, #FFF5CD 100%);
+  background: linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 100%);
 }
 
 .bg-gradient-secondary {
-  background: linear-gradient(135deg, #FFF5CD 0%, #FFCFB3 100%);
+  background: linear-gradient(135deg, #FEFFC4 0%, #FFDE63 100%);
 }
 
 .bg-gradient-accent {
-  background: linear-gradient(135deg, #FFCFB3 0%, #E78F81 100%);
+  background: linear-gradient(135deg, #FFDE63 0%, #FFBC4C 100%);
 }
 
 /* Custom scrollbar */

@@ -211,7 +211,7 @@ const IITInternationalRelationsConclave = () => {
           <h2 
             className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
             style={{
-              background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
+              background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent'
@@ -241,7 +241,7 @@ const IITInternationalRelationsConclave = () => {
           <h2 
             className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
             style={{
-              background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
+              background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent'
