@@ -50,12 +50,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
     visible: { 
       opacity: 1, 
       y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.7,
-        delay: index * 0.15,
-        ease: "easeOut"
-      }
+      scale: 1
     }
   };
 
@@ -63,8 +58,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
     hidden: { scale: 1.2, opacity: 0 },
     visible: { 
       scale: 1, 
-      opacity: 1,
-      transition: { duration: 1, ease: "easeOut" }
+      opacity: 1
     }
   };
 
@@ -72,14 +66,14 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
     hidden: { x: 50, opacity: 0 },
     visible: { 
       x: 0, 
-      opacity: 1,
-      transition: { duration: 0.7, delay: 0.4, ease: "easeOut" }
+      opacity: 1
     }
   };
 
   return (
     <motion.div 
       className="w-full rounded-3xl overflow-hidden mb-12 group"
+      id=""
       style={{
         background: 'rgba(255, 255, 255, 0.6)',
         backdropFilter: 'blur(25px)',
@@ -246,9 +240,10 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
                   color: 'transparent'
                 }}
                 whileHover={{
-                  background: 'linear-gradient(135deg, #E78F81, #B7E0FF, #FFCFB3)',
+                  background: 'linear-gradient(135deg, #E78F81, #B7E0FF)',
                   backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text'
+                  // WebkitBackgroundClip: 'text',
+                  color: 'transparent'
                 }}
                 transition={{ duration: 0.4 }}
               >

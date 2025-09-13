@@ -17,11 +17,7 @@ const GoogleMapLocation = () => {
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.4, 0, 0.2, 1]
-      }
+      opacity: 1
     }
   }
 
@@ -29,12 +25,7 @@ const GoogleMapLocation = () => {
     hidden: { scale: 0, rotate: -180 },
     visible: {
       scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.6,
-        type: "spring" as const,
-        stiffness: 120
-      }
+      rotate: 0
     }
   }
 
@@ -185,11 +176,11 @@ const GoogleMapLocation = () => {
                   href="https://maps.google.com/?q=Indian+Institute+of+Technology+Jodhpur"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-theme-primary to-theme-primary/80 text-white rounded-lg font-semibold shadow-lg border border-theme-primary/20 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 font-quicksand"
                   variants={itemVariants}
                   whileHover={{ 
                     scale: 1.05, 
-                    boxShadow: "0 10px 30px rgba(183, 224, 255, 0.3)",
+                    boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)",
                     y: -2
                   }}
                   whileTap={{ scale: 0.98 }}
@@ -204,11 +195,11 @@ const GoogleMapLocation = () => {
                   href="https://goo.gl/maps/IITJodhpur"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-theme-accent/90 to-theme-accent text-white rounded-lg font-semibold shadow-lg border border-theme-accent/20 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 font-quicksand"
                   variants={itemVariants}
                   whileHover={{ 
                     scale: 1.05, 
-                    boxShadow: "0 10px 30px rgba(255, 207, 179, 0.3)",
+                    boxShadow: "0 10px 30px rgba(249, 115, 22, 0.3)",
                     y: -2
                   }}
                   whileTap={{ scale: 0.98 }}

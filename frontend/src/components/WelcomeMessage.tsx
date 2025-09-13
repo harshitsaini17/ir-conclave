@@ -18,11 +18,7 @@ const WelcomeMessage = () => {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
+      y: 0
     }
   }
 
@@ -31,11 +27,7 @@ const WelcomeMessage = () => {
     visible: {
       opacity: 1,
       x: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
+      scale: 1
     }
   }
 
@@ -43,11 +35,7 @@ const WelcomeMessage = () => {
     hidden: { opacity: 0, x: 50 },
     visible: {
       opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
+      x: 0
     }
   }
 
@@ -61,6 +49,7 @@ const WelcomeMessage = () => {
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={containerVariants}
+      id='welcome'
     >
       {/* Animated Background Elements */}
       <motion.div 

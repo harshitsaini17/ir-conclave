@@ -50,12 +50,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
     visible: { 
       opacity: 1, 
       y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.3,
-        delay: index * 0.04,
-        ease: "easeOut"
-      }
+      scale: 1
     }
   };
 
@@ -63,8 +58,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
     hidden: { scale: 1.1, opacity: 0 },
     visible: { 
       scale: 1, 
-      opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
+      opacity: 1
     }
   };
 
@@ -72,8 +66,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
     hidden: { x: 30, opacity: 0 },
     visible: { 
       x: 0, 
-      opacity: 1,
-      transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
+      opacity: 1
     }
   };
 
@@ -216,7 +209,8 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
                 whileHover={{
                   background: 'linear-gradient(135deg, #E78F81, #B7E0FF)',
                   backgroundClip: 'text',
-                  WebkitBackgroundClip: 'text'
+                  // WebkitBackgroundClip: 'text',
+                  color: 'transparent'
                 }}
                 transition={{ duration: 0.3 }}
               >

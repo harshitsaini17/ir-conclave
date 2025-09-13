@@ -18,11 +18,7 @@ const Footer = () => {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
+      y: 0
     }
   }
 
@@ -30,11 +26,7 @@ const Footer = () => {
     hidden: { scale: 0, rotate: -180 },
     visible: {
       scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 0.5,
-        ease: "backOut"
-      }
+      rotate: 0
     }
   }
 
@@ -149,10 +141,12 @@ const Footer = () => {
                       whileHover={{
                         background: 'linear-gradient(135deg, #B7E0FF, #E78F81)',
                         backgroundClip: 'text',
-                        WebkitBackgroundClip: 'text',
                         color: 'transparent'
                       }}
                       transition={{ duration: 0.3 }}
+                      style={{
+                        WebkitBackgroundClip: 'text'
+                      }}
                     >
                       All IITs International Relations Conclave 2025
                     </motion.h3>
@@ -265,10 +259,10 @@ const Footer = () => {
               <ul className="space-y-2">
                 {[
                   { label: 'Home', href: '#home', color: '#B7E0FF' },
-                  { label: 'About Conclave', href: '#about', color: '#FFF5CD' },
+                  { label: 'Welcome', href: '#welcome', color: '#FFF5CD' },
                   { label: 'Panel Members', href: '#panel', color: '#FFCFB3' },
                   { label: 'Participants', href: '#participants', color: '#E78F81' },
-                  { label: 'Event Schedule', href: '#schedule', color: '#B7E0FF' }
+                  { label: 'International Student Handbook', href: 'https://drive.google.com/file/d/1E7ZZ9ot-d7JyCvGLGOT4yB8mRcvOt5Z2/view', color: '#B7E0FF' }
                 ].map((link, index) => (
                   <motion.li 
                     key={index}

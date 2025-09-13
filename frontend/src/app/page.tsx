@@ -205,11 +205,17 @@ const IITInternationalRelationsConclave = () => {
       >
         {/* Panel Members Section */}
         <section 
-          id="panel-members" 
+          id="panel" 
           className="mb-16"
         >
           <h2 
-            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-12 text-center font-exo2"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
+            style={{
+              background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              color: 'transparent'
+            }}
           >
             Organizing Panel
           </h2>
@@ -233,7 +239,13 @@ const IITInternationalRelationsConclave = () => {
           id="participants"
         >
           <h2 
-            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-12 text-center font-exo2"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
+            style={{
+              background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              color: 'transparent'
+            }}
           >
             Distinguished Participants
           </h2>

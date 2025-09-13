@@ -30,16 +30,14 @@ const ContactUs = () => {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-theme-primary/10 via-theme-secondary/5 to-theme-accent/10 relative overflow-hidden" id="contact">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-theme-primary/8 rounded-full blur-xl animate-float"></div>
-        <div className="absolute bottom-40 right-20 w-48 h-48 bg-theme-accent/10 rounded-full blur-2xl animate-float-delayed"></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-theme-secondary/8 rounded-full blur-lg animate-pulse"></div>
-      </div>
+    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,rgba(183,224,255,0.1),transparent)]"></div>
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+      <div className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-br from-yellow-200 to-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
 
       <motion.div 
-        className="container mx-auto px-6 relative z-10"
+        className="container mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -47,10 +45,15 @@ const ContactUs = () => {
       >
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <motion.div className="text-center mb-12" variants={itemVariants}>
+          <motion.div 
+            className="text-center mb-12" 
+            variants={itemVariants}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+          >
             <motion.h2 
               className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-exo2"
               variants={itemVariants}
+              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               style={{
                 background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
                 WebkitBackgroundClip: 'text',
@@ -63,13 +66,10 @@ const ContactUs = () => {
             <motion.p 
               className="text-xl text-gray-600 font-medium mb-4 font-quicksand"
               variants={itemVariants}
+              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
             >
               Get in touch with the International Relations Office
             </motion.p>
-            <motion.div 
-              className="w-24 h-1 bg-gradient-to-r from-theme-primary to-theme-accent mx-auto mb-8 rounded-full"
-              variants={itemVariants}
-            ></motion.div>
           </motion.div>
 
           {/* Contact Cards */}
@@ -106,6 +106,7 @@ const ContactUs = () => {
               <motion.div
                 key={index}
                 variants={cardVariants}
+                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: index * 0.1 }}
                 whileHover={{ 
                   y: -8, 
                   scale: 1.05,
@@ -160,40 +161,42 @@ const ContactUs = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Hover effect overlay */}
-                  <motion.div 
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                    style={{
-                      background: `linear-gradient(135deg, ${contact.color}05, ${contact.color}10)`
-                    }}
-                  ></motion.div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
-          {/* Dean Contact Information */}
+          {/* Dean Contact Information - FIXED */}
           <motion.div 
             className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20"
             variants={itemVariants}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
             whileHover={{ y: -5 }}
           >
             <div className="text-center">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-theme-primary to-theme-accent bg-clip-text text-transparent mb-4 font-exo2">
+              <motion.h3 
+                className="text-2xl font-bold mb-4 font-exo2"
+                style={{
+                  background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+                transition={{ duration: 0.3 }}
+              >
                 Dean of International Relations (DOIR)
-              </h3>
+              </motion.h3>
               <div className="space-y-3">
                 <p className="text-lg font-semibold text-gray-700 font-quicksand">Dr. Ankur Gupta</p>
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600 font-quicksand">
                   <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-theme-primary" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                     <span>9794039955</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-theme-accent" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                     <span>02912801021</span>

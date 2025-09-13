@@ -23,9 +23,9 @@ const Navbar = () => {
 
   const navItems = [
     { label: 'Home', href: '#home', id: 'home' },
-    { label: 'Visit IIT Jodhpur', href: '#visit', id: 'visit' },
-    { label: 'Travel Guidelines to Jodhpur', href: '#travel', id: 'travel' },
-    { label: 'IIT Jodhpur on Google Map', href: '#map', id: 'map' },
+    { label: 'Visit IIT Jodhpur', href: 'https://iitj.ac.in/main/en/iitj', id: 'visit' },
+    { label: 'Travel Guidelines to Jodhpur', href: 'https://iitj.ac.in/main/en/how-to-reach-iit-jodhpur', id: 'travel' },
+    { label: 'IIT Jodhpur on Google Map', href: '#location', id: 'map' },
     { label: 'Contact Us', href: '#contact', id: 'contact' },
   ]
 
