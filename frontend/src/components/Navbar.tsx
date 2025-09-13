@@ -33,13 +33,19 @@ const Navbar = () => {
     setActiveSection(id)
     setIsMenuOpen(false)
     
-    // Smooth scroll to section
-    const element = document.querySelector(href)
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
+    // Check if it's an internal anchor link (starts with #)
+    if (href.startsWith('#')) {
+      // Smooth scroll to section for internal links
+      const element = document.querySelector(href)
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    } else {
+      // For external URLs, open in new tab/window
+      window.open(href, '_blank', 'noreferrer')
     }
   }
 
@@ -129,7 +135,10 @@ const Navbar = () => {
                   key={index}
                   href={item.href}
                   onClick={(e) => {
-                    e.preventDefault()
+                    // Only prevent default for internal anchor links
+                    if (item.href.startsWith('#')) {
+                      e.preventDefault()
+                    }
                     handleNavClick(item.href, item.id)
                   }}
                   className={`relative px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 font-quicksand ${
@@ -258,7 +267,10 @@ const Navbar = () => {
                     key={index}
                     href={item.href}
                     onClick={(e) => {
-                      e.preventDefault()
+                      // Only prevent default for internal anchor links
+                      if (item.href.startsWith('#')) {
+                        e.preventDefault()
+                      }
                       handleNavClick(item.href, item.id)
                     }}
                     className={`block py-3 px-4 font-medium rounded-xl transition-all duration-300 relative overflow-hidden ${
