@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface Member {
   name: string;
@@ -10,9 +11,10 @@ interface Member {
 
 interface MemberCardProps {
   member: Member;
+  index?: number;
 }
 
-const MemberCard = ({ member }: MemberCardProps) => {
+const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
   const [imageError, setImageError] = useState(false);
 
   // Get college background image based on institution
@@ -20,85 +22,257 @@ const MemberCard = ({ member }: MemberCardProps) => {
     if (role.includes("IIT Jodhpur")) return "/images/left-logo.jpg";
     if (role.includes("IIT Kharagpur")) return "/images/18.jpg";
     if (role.includes("IIT Roorkee")) return "/images/22.jpg";
-    if (role.includes("IIT Bombay"))
-      return "/images/39.jpg";
+    if (role.includes("IIT Bombay")) return "/images/39.jpg";
     if (role.includes("IIT Delhi")) return "/images/38.jpg";
-    if (role.includes("IIT Madras"))
-      return "/images/36.jpg";
-    if (role.includes("IIT Kanpur"))
-      return "/images/46.jpg";
-    if (role.includes("IIT Guwahati"))
-      return "/images/12.jpg";
+    if (role.includes("IIT Madras")) return "/images/36.jpg";
+    if (role.includes("IIT Kanpur")) return "/images/46.jpg";
+    if (role.includes("IIT Guwahati")) return "/images/12.jpg";
     if (role.includes("IIT BHU")) return "/images/25.jpg";
     if (role.includes("IIT ISM")) return "/images/28.jpg";
     if (role.includes("IIT Jammu")) return "/images/32.jpg";
     if (role.includes("IIT Ropar")) return "/images/44.jpg";
     if (role.includes("IIT Goa")) return "/images/48.jpg";
-    if (role.includes("IIT Tirupati"))
-      return "/images/52.jpg";
+    if (role.includes("IIT Tirupati")) return "/images/52.jpg";
     if (role.includes("IIT Mandi")) return "/images/54.jpg";
-    if (role.includes("IIT Indore"))
-      return "/images/58.jpg";
+    if (role.includes("IIT Indore")) return "/images/58.jpg";
     if (role.includes("IIT Patna")) return "/images/63.jpg";
-    if (role.includes("IIT Palakkad"))
-      return "/images/10.jpg";
+    if (role.includes("IIT Palakkad")) return "/images/10.jpg";
     if (role.includes("DAAD")) return "/images/6.jpg";
     return "/images/colleges/default-bg.jpg";
   };
 
+  const cardVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 50,
+      scale: 0.9
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const imageVariants = {
+    hidden: { scale: 1.1, opacity: 0 },
+    visible: { 
+      scale: 1, 
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
+  const contentVariants = {
+    hidden: { x: 30, opacity: 0 },
+    visible: { 
+      x: 0, 
+      opacity: 1,
+      transition: { duration: 0.6, delay: 0.3, ease: "easeOut" }
+    }
+  };
+
   return (
-    <div className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden h-full">
-      {/* Top Image Section */}
-      <div className="h-48 relative bg-gray-200">
-        {!imageError && member.image ? (
-          <Image
-            src={member.image}
-            alt={member.name}
-            fill
-            className="object-cover"
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-gray-300 to-gray-400 flex items-center justify-center">
-            <div className="w-20 h-20 bg-white/30 rounded-full flex items-center justify-center">
-              <svg
-                className="w-10 h-10 text-gray-600"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                  clipRule="evenodd"
-                />
-              </svg>
+    <motion.div 
+      className="w-full rounded-2xl overflow-hidden mb-8 group cursor-pointer"
+      style={{
+        background: 'rgba(255, 255, 255, 0.4)',
+        backdropFilter: 'blur(20px)',
+        border: '1px solid rgba(255, 255, 255, 0.3)'
+      }}
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-50px" }}
+      whileHover={{ 
+        scale: 1.02,
+        y: -5,
+        boxShadow: "0 20px 40px rgba(0,0,0,0.1)"
+      }}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Animated background gradients */}
+      <motion.div
+        className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+        style={{
+          background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)'
+        }}
+      />
+      
+      <div className="flex relative z-10">
+        {/* Left Image Section */}
+        <motion.div 
+          className="w-1/3 h-64 relative flex-shrink-0 overflow-hidden"
+          variants={imageVariants}
+        >
+          <motion.div
+            className="absolute inset-0 rounded-l-2xl"
+            style={{
+              background: 'linear-gradient(135deg, #B7E0FF 0%, #FFF5CD 50%, #FFCFB3 100%)',
+              padding: '2px'
+            }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="w-full h-full bg-white rounded-l-2xl overflow-hidden relative">
+              {!imageError && member.image ? (
+                <motion.div className="relative w-full h-full">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                    onError={() => setImageError(true)}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 opacity-0 group-hover:opacity-100"
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.div>
+              ) : (
+                <motion.div 
+                  className="w-full h-full flex items-center justify-center"
+                  style={{
+                    background: 'linear-gradient(135deg, #FFF5CD, #FFCFB3)'
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <motion.div 
+                    className="w-20 h-20 rounded-full flex items-center justify-center"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.5)',
+                      backdropFilter: 'blur(10px)'
+                    }}
+                    animate={{
+                      rotate: [0, 360]
+                    }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                  >
+                    <svg
+                      className="w-10 h-10 text-gray-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  </motion.div>
+                </motion.div>
+              )}
             </div>
+          </motion.div>
+        </motion.div>
+
+        {/* Right Content Section */}
+        <motion.div 
+          className="w-2/3 py-6 relative flex items-center"
+          variants={contentVariants}
+        >
+          <div className="relative w-full h-full flex items-center">
+            {/* Animated Background College Image */}
+            <motion.div
+              className="absolute inset-0 bg-no-repeat bg-center mr-24 opacity-5 group-hover:opacity-10"
+              style={{
+                backgroundImage: `url(${getCollegeBackground(member.role)})`,
+                backgroundSize: 'auto 70%',
+              }}
+              animate={{
+                scale: [1, 1.05, 1],
+                opacity: [0.05, 0.1, 0.05]
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+
+            {/* Content with enhanced styling */}
+            <motion.div 
+              className="relative z-10 p-8 w-full"
+              whileHover={{ x: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.h2 
+                className="text-2xl lg:text-3xl font-bold mb-4 leading-tight"
+                style={{
+                  background: 'linear-gradient(135deg, #1f2937, #374151)',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text',
+                  color: 'transparent'
+                }}
+                whileHover={{
+                  background: 'linear-gradient(135deg, #E78F81, #B7E0FF)',
+                  backgroundClip: 'text',
+                  WebkitBackgroundClip: 'text'
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                {member.name}
+              </motion.h2>
+              
+              <motion.div
+                className="w-12 h-1 mb-4 rounded-full"
+                style={{
+                  background: 'linear-gradient(90deg, #B7E0FF, #E78F81)'
+                }}
+                initial={{ width: 0 }}
+                whileInView={{ width: 48 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+              />
+              
+              <motion.p 
+                className="text-lg text-gray-700 leading-relaxed"
+                whileHover={{ color: '#4b5563' }}
+                transition={{ duration: 0.3 }}
+              >
+                {member.role}
+              </motion.p>
+              
+              {/* Decorative elements */}
+              <motion.div 
+                className="flex space-x-2 mt-4"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 0.5 }}
+              >
+                {[0, 1, 2].map((i) => (
+                  <motion.div
+                    key={i}
+                    className="w-2 h-2 rounded-full"
+                    style={{
+                      background: i === 0 ? '#B7E0FF' : i === 1 ? '#FFCFB3' : '#E78F81'
+                    }}
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.6, 1, 0.6]
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: i * 0.2,
+                      ease: "easeInOut"
+                    }}
+                  />
+                ))}
+              </motion.div>
+            </motion.div>
           </div>
-        )}
+        </motion.div>
       </div>
-
-      {/* Bottom Content Section */}
-      <div className="p-6 bg-gray-100 relative min-h-[200px] flex flex-col">
-        {/* Background College Image with Low Opacity */}
-        <div
-          className="absolute inset-0 bg-no-repeat bg-center opacity-5"
-          style={{
-            backgroundImage: `url(${getCollegeBackground(member.role)})`,
-            backgroundSize: 'auto 60%',
-          }}
-        ></div>
-
-        {/* Content */}
-        <div className="relative z-10 flex-1 flex flex-col">
-          <h2 className="text-xl font-bold text-gray-900 mb-3 leading-tight">
-            {member.name}
-          </h2>
-          <p className="text-base text-gray-700 leading-relaxed flex-1">
-            {member.role}
-          </p>
-        </div>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
