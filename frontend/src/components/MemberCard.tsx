@@ -93,7 +93,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
       <motion.div
         className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500"
         style={{
-          background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)'
+          background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)'
         }}
       />
       
@@ -106,7 +106,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
           <motion.div
             className="absolute inset-0 rounded-l-2xl"
             style={{
-              background: 'linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 50%, #FFDE63 100%)',
+              background: 'linear-gradient(135deg, #0C2E8A 0%, #F5E9DC 50%, #F47B20 100%)',
               padding: '2px'
             }}
             whileHover={{ scale: 1.05 }}
@@ -131,7 +131,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
                 <motion.div 
                   className="w-full h-full flex items-center justify-center"
                   style={{
-                    background: 'linear-gradient(135deg, #FEFFC4, #FFDE63)'
+                    background: 'linear-gradient(135deg, #F5E9DC, #F47B20)'
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
@@ -207,7 +207,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
                   color: 'transparent'
                 }}
                 whileHover={{
-                  background: 'linear-gradient(135deg, #FFBC4C, #B7E0FF)',
+                  background: 'linear-gradient(135deg, #FFBC4C, #0C2E8A)',
                   backgroundClip: 'text',
                   // WebkitBackgroundClip: 'text',
                   color: 'transparent'
@@ -220,7 +220,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
               <motion.div
                 className="w-12 h-1 mb-4 rounded-full"
                 style={{
-                  background: 'linear-gradient(90deg, #B7E0FF, #FFBC4C)'
+                  background: 'linear-gradient(90deg, #0C2E8A, #FFBC4C)'
                 }}
                 initial={{ width: 0 }}
                 whileInView={{ width: 48 }}
@@ -247,7 +247,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
                     key={i}
                     className="w-2 h-2 rounded-full"
                     style={{
-                      background: i === 0 ? '#B7E0FF' : i === 1 ? '#FFDE63' : '#FFBC4C'
+                      background: i === 0 ? '#0C2E8A' : i === 1 ? '#F47B20' : '#FFBC4C'
                     }}
                     animate={{
                       scale: [1, 1.5, 1],

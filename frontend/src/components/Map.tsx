@@ -52,7 +52,7 @@ const GoogleMapLocation = () => {
               className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-exo2"
               variants={itemVariants}
               style={{
-                background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)',
+                background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'

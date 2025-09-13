@@ -54,7 +54,7 @@ const WelcomeMessage = () => {
       {/* Animated Background Elements */}
       <motion.div 
         className="absolute top-10 left-10 w-20 h-20 rounded-full opacity-20"
-        style={{ background: 'linear-gradient(135deg, #B7E0FF, #FFBC4C)' }}
+        style={{ background: 'linear-gradient(135deg, #0C2E8A, #FFBC4C)' }}
         animate={{
           scale: [1, 1.2, 1],
           rotate: [0, 180, 360]
@@ -68,7 +68,7 @@ const WelcomeMessage = () => {
       
       <motion.div 
         className="absolute bottom-10 right-10 w-32 h-32 rounded-full opacity-15"
-        style={{ background: 'linear-gradient(135deg, #FFDE63, #FEFFC4)' }}
+        style={{ background: 'linear-gradient(135deg, #F47B20, #F5E9DC)' }}
         animate={{
           scale: [1.2, 1, 1.2],
           rotate: [360, 180, 0]
@@ -101,7 +101,7 @@ const WelcomeMessage = () => {
           <motion.div
             className="w-32 h-1 mx-auto rounded-full"
             style={{
-              background: 'linear-gradient(90deg, #B7E0FF, #FFDE63, #FFBC4C)'
+              background: 'linear-gradient(90deg, #0C2E8A, #F47B20, #FFBC4C)'
             }}
             initial={{ width: 0 }}
             whileInView={{ width: 128 }}
@@ -124,7 +124,7 @@ const WelcomeMessage = () => {
             <motion.div 
               className="relative w-80 h-96 rounded-2xl overflow-hidden shadow-2xl group"
               style={{
-                background: 'linear-gradient(135deg, #B7E0FF, #FFDE63)',
+                background: 'linear-gradient(135deg, #0C2E8A, #F47B20)',
                 padding: '4px'
               }}
               whileHover={{ 
@@ -136,7 +136,7 @@ const WelcomeMessage = () => {
               <motion.div
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300"
                 style={{
-                  background: 'linear-gradient(135deg, #FFBC4C, #FFDE63)'
+                  background: 'linear-gradient(135deg, #FFBC4C, #F47B20)'
                 }}
               />
               <div className="relative w-full h-full bg-white rounded-2xl overflow-hidden">
@@ -171,7 +171,7 @@ const WelcomeMessage = () => {
               <motion.div
                 className="absolute inset-0 opacity-10"
                 style={{
-                  background: 'linear-gradient(135deg, #B7E0FF 0%, #FEFFC4 50%, #FFDE63 100%)'
+                  background: 'linear-gradient(135deg, #0C2E8A 0%, #F5E9DC 50%, #F47B20 100%)'
                 }}
               />
               

@@ -165,7 +165,7 @@ const Carousel = () => {
               ease: [0.4, 0, 0.2, 1]
             }}
             style={{
-              background: 'linear-gradient(135deg, #ffffff, #B7E0FF, #FEFFC4)',
+              background: 'linear-gradient(135deg, #ffffff, #0C2E8A, #F5E9DC)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
@@ -185,7 +185,7 @@ const Carousel = () => {
               delay: 0.2
             }}
             style={{
-              background: 'linear-gradient(135deg, #FFDE63, #FFBC4C)',
+              background: 'linear-gradient(135deg, #F47B20, #FFBC4C)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
@@ -226,7 +226,7 @@ const Carousel = () => {
                 key={i}
                 className="w-3 h-3 rounded-full"
                 style={{
-                  background: i === 0 ? '#B7E0FF' : i === 1 ? '#FFDE63' : '#FFBC4C'
+                  background: i === 0 ? '#0C2E8A' : i === 1 ? '#F47B20' : '#FFBC4C'
                 }}
               />
             ))}
@@ -251,7 +251,7 @@ const Carousel = () => {
             }`}
             style={{
               background: index === currentSlide 
-                ? 'linear-gradient(135deg, #B7E0FF, #FFBC4C)'
+                ? 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
                 : 'rgba(255, 255, 255, 0.5)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255, 255, 255, 0.3)'
@@ -267,7 +267,7 @@ const Carousel = () => {
       <motion.div 
         className="absolute bottom-0 left-0 h-1 z-30"
         style={{
-          background: 'linear-gradient(90deg, #B7E0FF, #FFDE63, #FFBC4C)',
+          background: 'linear-gradient(90deg, #0C2E8A, #F47B20, #FFBC4C)',
           width: '100%'
         }}
         initial={{ scaleX: 0 }}

@@ -199,6 +199,17 @@ const IITInternationalRelationsConclave = () => {
       
       {/* Welcome Section */}
       <WelcomeMessage />
+
+      {/* Poster Section */}
+      <section className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+        <div className="flex justify-center">
+          <img 
+            src="/images/poster.png" 
+            alt="Conference Poster" 
+            className="w-full max-w-7xl h-auto rounded-2xl shadow-2xl"
+          />
+        </div>
+      </section>
       
       <div 
         className="max-w-7xl mx-auto px-4 py-12 relative z-10"
@@ -211,7 +222,7 @@ const IITInternationalRelationsConclave = () => {
           <h2 
             className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
             style={{
-              background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)',
+              background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent'
@@ -241,7 +252,7 @@ const IITInternationalRelationsConclave = () => {
           <h2 
             className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
             style={{
-              background: 'linear-gradient(135deg, #B7E0FF, #FFDE63, #FFBC4C)',
+              background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent'

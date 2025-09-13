@@ -90,7 +90,7 @@ const Navbar = () => {
                 <motion.div 
                   className="absolute inset-0 rounded-full opacity-0"
                   style={{
-                    background: 'linear-gradient(135deg, #B7E0FF, #FFDE63)',
+                    background: 'linear-gradient(135deg, #0C2E8A, #F47B20)',
                     filter: 'blur(15px)'
                   }}
                   whileHover={{ opacity: 0.6 }}
@@ -167,7 +167,7 @@ const Navbar = () => {
                   <motion.div
                     className="absolute inset-0 rounded-xl"
                     style={{
-                      background: 'linear-gradient(135deg, #FFBC4C, #FFDE63)',
+                      background: 'linear-gradient(135deg, #FFBC4C, #F47B20)',
                       opacity: 0
                     }}
                     whileHover={{ opacity: 0.8 }}
@@ -180,7 +180,7 @@ const Navbar = () => {
                       <motion.div
                         className="absolute inset-0 rounded-xl"
                         style={{
-                          background: 'linear-gradient(135deg, #B7E0FF, #FFBC4C)'
+                          background: 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
                         }}
                         initial={{ scale: 0, opacity: 0 }}
                         animate={{ scale: 1, opacity: 0.9 }}
@@ -209,7 +209,7 @@ const Navbar = () => {
             <motion.div
               className="absolute inset-0"
               style={{
-                background: 'linear-gradient(135deg, #FFDE63, #FFBC4C)',
+                background: 'linear-gradient(135deg, #F47B20, #FFBC4C)',
                 opacity: 0
               }}
               whileHover={{ opacity: 0.8 }}
@@ -288,8 +288,8 @@ const Navbar = () => {
                       className="absolute inset-0 rounded-xl"
                       style={{
                         background: activeSection === item.id 
-                          ? 'linear-gradient(135deg, #B7E0FF, #FFBC4C)'
-                          : 'linear-gradient(135deg, #FFDE63, #FFBC4C)',
+                          ? 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
+                          : 'linear-gradient(135deg, #F47B20, #FFBC4C)',
                         opacity: activeSection === item.id ? 0.9 : 0
                       }}
                       whileHover={{ opacity: 0.6 }}
