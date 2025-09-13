@@ -9,7 +9,7 @@ const Carousel = () => {
   const carouselData = [
     {
       image: '/images/IITJ1.jpg',
-      color: 'from-blue-600/80 via-purple-600/80 to-pink-600/80'
+      color: 'from-teal-600/40 via-cyan-600/40 to-blue-600/40'
     },
     {
       image: '/images/IITJ2.jpg',
@@ -110,31 +110,31 @@ const Carousel = () => {
             {/* Animated Pattern Overlay */}
             <motion.div 
               className="absolute inset-0"
-              style={{
-                background: `
-                  radial-gradient(circle at 20% 20%, rgba(183, 224, 255, 0.3) 0%, transparent 50%),
-                  radial-gradient(circle at 80% 80%, rgba(255, 207, 179, 0.3) 0%, transparent 50%),
-                  radial-gradient(circle at 40% 60%, rgba(231, 143, 129, 0.2) 0%, transparent 50%)
-                `
-              }}
-              animate={{
-                background: [
-                  `radial-gradient(circle at 20% 20%, rgba(183, 224, 255, 0.3) 0%, transparent 50%),
-                   radial-gradient(circle at 80% 80%, rgba(255, 207, 179, 0.3) 0%, transparent 50%),
-                   radial-gradient(circle at 40% 60%, rgba(231, 143, 129, 0.2) 0%, transparent 50%)`,
-                  `radial-gradient(circle at 60% 30%, rgba(183, 224, 255, 0.4) 0%, transparent 50%),
-                   radial-gradient(circle at 20% 70%, rgba(255, 207, 179, 0.4) 0%, transparent 50%),
-                   radial-gradient(circle at 80% 40%, rgba(231, 143, 129, 0.3) 0%, transparent 50%)`,
-                  `radial-gradient(circle at 20% 20%, rgba(183, 224, 255, 0.3) 0%, transparent 50%),
-                   radial-gradient(circle at 80% 80%, rgba(255, 207, 179, 0.3) 0%, transparent 50%),
-                   radial-gradient(circle at 40% 60%, rgba(231, 143, 129, 0.2) 0%, transparent 50%)`
-                ]
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
+            //   style={{
+            //     background: `
+            //       radial-gradient(circle at 20% 20%, rgba(183, 224, 255, 0.3) 0%, transparent 50%),
+            //       radial-gradient(circle at 80% 80%, rgba(255, 207, 179, 0.3) 0%, transparent 50%),
+            //       radial-gradient(circle at 40% 60%, rgba(231, 143, 129, 0.2) 0%, transparent 50%)
+            //     `
+            //   }}
+            //   animate={{
+            //     background: [
+            //       `radial-gradient(circle at 20% 20%, rgba(183, 224, 255, 0.3) 0%, transparent 50%),
+            //        radial-gradient(circle at 80% 80%, rgba(255, 207, 179, 0.3) 0%, transparent 50%),
+            //        radial-gradient(circle at 40% 60%, rgba(231, 143, 129, 0.2) 0%, transparent 50%)`,
+            //       `radial-gradient(circle at 60% 30%, rgba(183, 224, 255, 0.4) 0%, transparent 50%),
+            //        radial-gradient(circle at 20% 70%, rgba(255, 207, 179, 0.4) 0%, transparent 50%),
+            //        radial-gradient(circle at 80% 40%, rgba(231, 143, 129, 0.3) 0%, transparent 50%)`,
+            //       `radial-gradient(circle at 20% 20%, rgba(183, 224, 255, 0.3) 0%, transparent 50%),
+            //        radial-gradient(circle at 80% 80%, rgba(255, 207, 179, 0.3) 0%, transparent 50%),
+            //        radial-gradient(circle at 40% 60%, rgba(231, 143, 129, 0.2) 0%, transparent 50%)`
+            //     ]
+            //   }}
+            //   transition={{
+            //     duration: 4,
+            //     repeat: Infinity,
+            //     ease: "easeInOut"
+            //   }}
             />
           </motion.div>
         </motion.div>
@@ -227,16 +227,6 @@ const Carousel = () => {
                 className="w-3 h-3 rounded-full"
                 style={{
                   background: i === 0 ? '#B7E0FF' : i === 1 ? '#FFCFB3' : '#E78F81'
-                }}
-                animate={{
-                  scale: [1, 1.5, 1],
-                  opacity: [0.7, 1, 0.7]
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  delay: i * 0.3,
-                  ease: "easeInOut"
                 }}
               />
             ))}

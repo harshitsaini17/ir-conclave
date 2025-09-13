@@ -88,7 +88,7 @@ const WelcomeMessage = () => {
           <motion.h2 
             className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
             style={{
-              background: 'linear-gradient(135deg, #E78F81, #FFCFB3, #B7E0FF)',
+              background: 'linear-gradient(135deg, #E78F81, #1e293b)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent'
