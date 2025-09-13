@@ -238,7 +238,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
               transition={{ duration: 0.3 }}
             >
               <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-4 leading-tight"
+                className="text-2xl lg:text-3xl font-bold mb-4 leading-tight font-exo2"
                 style={{
                   background: 'linear-gradient(135deg, #1f2937, #4b5563)',
                   backgroundClip: 'text',
@@ -266,7 +266,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
               />
               
               <motion.p 
-                className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium"
+                className="text-lg lg:text-xl text-gray-700 leading-relaxed font-medium font-quicksand"
                 whileHover={{ color: '#374151' }}
                 transition={{ duration: 0.3 }}
               >

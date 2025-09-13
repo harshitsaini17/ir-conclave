@@ -58,13 +58,19 @@ const GoogleMapLocation = () => {
           {/* Section Header */}
           <motion.div className="text-center mb-12" variants={itemVariants}>
             <motion.h2 
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-6"
+              className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-exo2"
               variants={itemVariants}
+              style={{
+                background: 'linear-gradient(135deg, #B7E0FF, #FFCFB3, #E78F81)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}
             >
               Event Location
             </motion.h2>
             <motion.p 
-              className="text-xl text-gray-700 font-medium mb-4"
+              className="text-xl text-gray-700 font-medium mb-4 font-quicksand"
               variants={itemVariants}
             >
               Indian Institute of Technology Jodhpur
@@ -100,8 +106,8 @@ const GoogleMapLocation = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </motion.div>
-                  <h3 className="font-semibold text-theme-primary mb-2">Address</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">NH 62, Surpura Bypass Rd, Karwar, Rajasthan 342030</p>
+                  <h3 className="font-semibold text-theme-primary mb-2 font-exo2">Address</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed font-quicksand">NH 62, Surpura Bypass Rd, Karwar, Rajasthan 342030</p>
                 </motion.div>
                 
                 <motion.div className="flex flex-col items-center group" variants={itemVariants}>
@@ -113,8 +119,8 @@ const GoogleMapLocation = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                     </svg>
                   </motion.div>
-                  <h3 className="font-semibold text-theme-accent mb-2">Phone</h3>
-                  <p className="text-gray-600 text-sm">+91 291 280 1115</p>
+                  <h3 className="font-semibold text-theme-accent mb-2 font-exo2">Phone</h3>
+                  <p className="text-gray-600 text-sm font-quicksand">+91 291 280 1115</p>
                 </motion.div>
                 
                 <motion.div className="flex flex-col items-center group" variants={itemVariants}>
@@ -126,8 +132,8 @@ const GoogleMapLocation = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </motion.div>
-                  <h3 className="font-semibold text-theme-tertiary mb-2">Email</h3>
-                  <p className="text-gray-600 text-sm">officeofir@iitjodhpur.ac.in</p>
+                  <h3 className="font-semibold text-theme-tertiary mb-2 font-exo2">Email</h3>
+                  <p className="text-gray-600 text-sm font-quicksand">officeofir@iitjodhpur.ac.in</p>
                 </motion.div>
                 
                 <motion.div className="flex flex-col items-center group" variants={itemVariants}>
@@ -139,8 +145,8 @@ const GoogleMapLocation = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </motion.div>
-                  <h3 className="font-semibold text-theme-secondary mb-2">Event Dates</h3>
-                  <p className="text-gray-600 text-sm">October 3-4, 2025</p>
+                  <h3 className="font-semibold text-theme-secondary mb-2 font-exo2">Event Dates</h3>
+                  <p className="text-gray-600 text-sm font-quicksand">October 3-4, 2025</p>
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -213,21 +219,6 @@ const GoogleMapLocation = () => {
                   Get Directions
                 </motion.a>
                 
-                <motion.button 
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-theme-secondary/90 to-theme-secondary text-gray-700 rounded-lg font-semibold shadow-lg border border-theme-secondary/30 transition-all duration-300"
-                  variants={itemVariants}
-                  whileHover={{ 
-                    scale: 1.05, 
-                    boxShadow: "0 10px 30px rgba(255, 245, 205, 0.4)",
-                    y: -2
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                  </svg>
-                  Share Location
-                </motion.button>
               </motion.div>
             </motion.div>
           </motion.div>

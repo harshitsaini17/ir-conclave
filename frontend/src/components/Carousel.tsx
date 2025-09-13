@@ -57,11 +57,7 @@ const Carousel = () => {
     visible: { 
       opacity: 1, 
       y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
+      scale: 1
     }
   }
 
@@ -162,8 +158,12 @@ const Carousel = () => {
         >
           {/* Fixed Title */}
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-exo2"
             variants={textVariants}
+            transition={{
+              duration: 0.8,
+              ease: [0.4, 0, 0.2, 1]
+            }}
             style={{
               background: 'linear-gradient(135deg, #ffffff, #B7E0FF, #FFF5CD)',
               backgroundClip: 'text',
@@ -177,8 +177,13 @@ const Carousel = () => {
           
           {/* Fixed Subtitle */}
           <motion.p 
-            className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4"
+            className="text-xl md:text-3xl lg:text-4xl font-semibold mb-4 font-quicksand"
             variants={textVariants}
+            transition={{
+              duration: 0.8,
+              ease: [0.4, 0, 0.2, 1],
+              delay: 0.2
+            }}
             style={{
               background: 'linear-gradient(135deg, #FFCFB3, #E78F81)',
               backgroundClip: 'text',
@@ -192,8 +197,13 @@ const Carousel = () => {
           
           {/* Fixed Description */}
           <motion.p 
-            className="text-lg md:text-xl lg:text-2xl font-medium opacity-95 mb-8 text-white"
+            className="text-lg md:text-xl lg:text-2xl font-medium opacity-95 mb-8 text-white font-quicksand"
             variants={textVariants}
+            transition={{
+              duration: 0.8,
+              ease: [0.4, 0, 0.2, 1],
+              delay: 0.4
+            }}
             style={{
               filter: 'drop-shadow(1px 1px 2px rgba(0,0,0,0.7))'
             }}
@@ -205,6 +215,11 @@ const Carousel = () => {
           <motion.div 
             className="flex justify-center space-x-4"
             variants={textVariants}
+            transition={{
+              duration: 0.8,
+              ease: [0.4, 0, 0.2, 1],
+              delay: 0.6
+            }}
           >
             {[...Array(3)].map((_, i) => (
               <motion.div

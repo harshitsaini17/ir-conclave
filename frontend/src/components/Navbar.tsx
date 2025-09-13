@@ -98,13 +98,13 @@ const Navbar = () => {
               </motion.div>
               <div className="hidden lg:block">
                 <motion.h1 
-                  className="text-md font-bold text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition-all duration-500"
+                  className="text-md font-bold text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 transition-all duration-500 font-exo2"
                   whileHover={{ scale: 1.05 }}
                 >
                   भारतीय प्रौद्योगिकी संस्थान, जोधपुर
                 </motion.h1>
                 <motion.h1 
-                  className="text-md font-bold text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-600 transition-all duration-500"
+                  className="text-md font-bold text-gray-800 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-blue-600 hover:to-teal-600 transition-all duration-500 font-exo2"
                   whileHover={{ scale: 1.05 }}
                 >
                   Indian Institute of Technology Jodhpur
@@ -132,7 +132,7 @@ const Navbar = () => {
                     e.preventDefault()
                     handleNavClick(item.href, item.id)
                   }}
-                  className={`relative px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 ${
+                  className={`relative px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 font-quicksand ${
                     activeSection === item.id
                       ? 'text-white'
                       : 'text-gray-700 hover:text-gray-900'

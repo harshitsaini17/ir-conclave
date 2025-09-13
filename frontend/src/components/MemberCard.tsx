@@ -52,8 +52,8 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
-        delay: index * 0.1,
+        duration: 0.3,
+        delay: index * 0.04,
         ease: "easeOut"
       }
     }
@@ -206,7 +206,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
               transition={{ duration: 0.3 }}
             >
               <motion.h2 
-                className="text-2xl lg:text-3xl font-bold mb-4 leading-tight"
+                className="text-2xl lg:text-3xl font-bold mb-4 leading-tight font-exo2"
                 style={{
                   background: 'linear-gradient(135deg, #1f2937, #374151)',
                   backgroundClip: 'text',
@@ -234,7 +234,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
               />
               
               <motion.p 
-                className="text-lg text-gray-700 leading-relaxed"
+                className="text-lg text-gray-700 leading-relaxed font-quicksand"
                 whileHover={{ color: '#4b5563' }}
                 transition={{ duration: 0.3 }}
               >

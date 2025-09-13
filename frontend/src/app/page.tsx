@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import MemberCard from '@/components/MemberCard'
@@ -7,41 +6,9 @@ import PanelMemberCard from '@/components/PanelMemberCard'
 import Carousel from '@/components/Carousel'
 import WelcomeMessage from '@/components/WelcomeMessage'
 import GoogleMapLocation from '@/components/Map'
+import ContactUs from '@/components/ContactUs'
 
 const IITInternationalRelationsConclave = () => {
-  const pageVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.3
-      }
-    }
-  }
-
-  const sectionVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut" as const
-      }
-    }
-  }
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
-  }
   // Panel Members Data
   const panelMembers = [
     {
@@ -215,11 +182,9 @@ const IITInternationalRelationsConclave = () => {
 ];
 
   return (
-    <motion.div 
-      className="min-h-screen bg-gradient-to-br from-theme-primary/5 via-theme-secondary/10 to-theme-accent/5 relative overflow-hidden"
-      variants={pageVariants}
-      initial="hidden"
-      animate="visible"
+    <div 
+      className="min-h-screen 
+      relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -235,92 +200,65 @@ const IITInternationalRelationsConclave = () => {
       {/* Welcome Section */}
       <WelcomeMessage />
       
-      <motion.div 
+      <div 
         className="max-w-7xl mx-auto px-4 py-12 relative z-10"
-        variants={sectionVariants}
       >
         {/* Panel Members Section */}
-        <motion.section 
+        <section 
           id="panel-members" 
           className="mb-16"
-          variants={sectionVariants}
         >
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-12 text-center"
-            variants={sectionVariants}
+          <h2 
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-12 text-center font-exo2"
           >
             Organizing Panel
-          </motion.h2>
+          </h2>
           
           {/* Panel member cards */}
-          <motion.div 
+          <div 
             className="space-y-8"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
           >
             {panelMembers.map((member, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={{
-                  hidden: { x: index % 2 === 0 ? -50 : 50, opacity: 0 },
-                  visible: {
-                    x: 0,
-                    opacity: 1,
-                    transition: { duration: 0.6, delay: index * 0.1 }
-                  }
-                }}
               >
                 <PanelMemberCard member={member} index={index} />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </motion.section>
+          </div>
+        </section>
 
         {/* Participants Section */}
-        <motion.section 
+        <section 
           id="participants"
-          variants={sectionVariants}
         >
-          <motion.h2 
-            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-12 text-center"
-            variants={sectionVariants}
+          <h2 
+            className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-theme-primary via-theme-accent to-theme-tertiary bg-clip-text text-transparent mb-12 text-center font-exo2"
           >
             Distinguished Participants
-          </motion.h2>
+          </h2>
           
           {/* Full-width cards, one per line */}
-          <motion.div 
+          <div 
             className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
           >
             {participants.map((member, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={{
-                  hidden: { y: 30, opacity: 0 },
-                  visible: {
-                    y: 0,
-                    opacity: 1,
-                    transition: { duration: 0.5, delay: index * 0.05 }
-                  }
-                }}
               >
                 <MemberCard member={member} index={index} />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-        </motion.section>
-      </motion.div>
+          </div>
+        </section>
+      </div>
+
+      <ContactUs />
 
       <GoogleMapLocation />
 
       <Footer />
-    </motion.div>
+    </div>
   )
 }
 
