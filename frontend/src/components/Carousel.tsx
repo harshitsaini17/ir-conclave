@@ -80,7 +80,7 @@ const Carousel = () => {
           animate="center"
           exit="exit"
           transition={{
-            duration: 1.2,
+            duration: 0.2,
             ease: "easeInOut"
           }}
           className="absolute inset-0 z-10"

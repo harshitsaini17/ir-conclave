@@ -124,7 +124,7 @@ const GoogleMapLocation = () => {
                     </svg>
                   </motion.div>
                   <h3 className="font-semibold text-theme-tertiary mb-2 font-exo2">Email</h3>
-                  <p className="text-gray-600 text-sm font-quicksand">officeofir@iitjodhpur.ac.in</p>
+                  <p className="text-gray-600 text-sm font-quicksand">officeofir@iitj.ac.in</p>
                 </motion.div>
                 
                 <motion.div className="flex flex-col items-center group" variants={itemVariants}>
