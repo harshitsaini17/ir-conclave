@@ -22,21 +22,25 @@ const Navbar = () => {
   }
 
   const navItems = [
-    { label: 'Home', href: '#home', id: 'home' },
-    { label: 'Visit IITJ', href: 'https://iitj.ac.in/main/en/iitj', id: 'visit' },
-    { label: 'Travel Guidelines', href: 'https://iitj.ac.in/main/en/how-to-reach-iit-jodhpur', id: 'travel' },
-    { label: 'IITJ on Google Map', href: '#location', id: 'map' },
-    { label: 'Student Handbook', href: 'https://drive.google.com/file/d/1E7ZZ9ot-d7JyCvGLGOT4yB8mRcvOt5Z2/view', id: 'about' },
-    { label: 'Contact Us', href: '#contact', id: 'contact' },
+    { label: 'Home', href: '#home', id: 'home', isExternal: false },
+    { label: 'Visit IITJ', href: 'https://iitj.ac.in/main/en/iitj', id: 'visit', isExternal: true },
+    { label: 'Travel Guidelines', href: 'https://iitj.ac.in/main/en/how-to-reach-iit-jodhpur', id: 'travel', isExternal: true },
+    { label: 'IITJ on Google Map', href: '#location', id: 'map', isExternal: false },
+    { label: 'Student Handbook', href: 'https://drive.google.com/file/d/1E7ZZ9ot-d7JyCvGLGOT4yB8mRcvOt5Z2/view', id: 'about', isExternal: true },
+    { label: 'Contact Us', href: '#contact', id: 'contact', isExternal: false },
   ]
 
-  const handleNavClick = (href: string, id: string) => {
-    setActiveSection(id)
+  const handleNavClick = (e: React.MouseEvent, href: string, id: string, isExternal: boolean) => {
     setIsMenuOpen(false)
     
-    // Check if it's an internal anchor link (starts with #)
-    if (href.startsWith('#')) {
-      // Smooth scroll to section for internal links
+    if (isExternal) {
+      // For external links, prevent default behavior and open in new tab
+      e.preventDefault()
+      window.open(href, '_blank', 'noopener noreferrer')
+    } else {
+      // For internal links, prevent default and smooth scroll
+      e.preventDefault()
+      setActiveSection(id)
       const element = document.querySelector(href)
       if (element) {
         element.scrollIntoView({ 
@@ -44,9 +48,6 @@ const Navbar = () => {
           block: 'start'
         })
       }
-    } else {
-      // For external URLs, open in new tab/window
-      window.open(href, '_blank', 'noreferrer')
     }
   }
 
@@ -135,15 +136,9 @@ const Navbar = () => {
                 <motion.a
                   key={index}
                   href={item.href}
-                  onClick={(e) => {
-                    // Only prevent default for internal anchor links
-                    if (item.href.startsWith('#')) {
-                      e.preventDefault()
-                    }
-                    handleNavClick(item.href, item.id)
-                  }}
+                  onClick={(e) => handleNavClick(e, item.href, item.id, item.isExternal)}
                   className={`relative px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 font-quicksand ${
-                    activeSection === item.id
+                    !item.isExternal && activeSection === item.id
                       ? 'text-white'
                       : 'text-gray-700 hover:text-gray-900'
                   }`}
@@ -174,9 +169,9 @@ const Navbar = () => {
                     transition={{ duration: 0.3 }}
                   />
                   
-                  {/* Active indicator */}
+                  {/* Active indicator - only for internal links */}
                   <AnimatePresence>
-                    {activeSection === item.id && (
+                    {!item.isExternal && activeSection === item.id && (
                       <motion.div
                         className="absolute inset-0 rounded-xl"
                         style={{
@@ -267,15 +262,9 @@ const Navbar = () => {
                   <motion.a
                     key={index}
                     href={item.href}
-                    onClick={(e) => {
-                      // Only prevent default for internal anchor links
-                      if (item.href.startsWith('#')) {
-                        e.preventDefault()
-                      }
-                      handleNavClick(item.href, item.id)
-                    }}
+                    onClick={(e) => handleNavClick(e, item.href, item.id, item.isExternal)}
                     className={`block py-3 px-4 font-medium rounded-xl transition-all duration-300 relative overflow-hidden ${
-                      activeSection === item.id
+                      !item.isExternal && activeSection === item.id
                         ? 'text-white'
                         : 'text-gray-700'
                     }`}
@@ -287,10 +276,10 @@ const Navbar = () => {
                     <motion.div
                       className="absolute inset-0 rounded-xl"
                       style={{
-                        background: activeSection === item.id 
+                        background: !item.isExternal && activeSection === item.id 
                           ? 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
                           : 'linear-gradient(135deg, #F47B20, #FFBC4C)',
-                        opacity: activeSection === item.id ? 0.9 : 0
+                        opacity: !item.isExternal && activeSection === item.id ? 0.9 : 0
                       }}
                       whileHover={{ opacity: 0.6 }}
                       transition={{ duration: 0.3 }}
@@ -299,16 +288,16 @@ const Navbar = () => {
                       <span className="flex items-center space-x-3">
                         <motion.span 
                           className={`w-2 h-2 rounded-full ${
-                            activeSection === item.id 
+                            !item.isExternal && activeSection === item.id 
                               ? 'bg-white' 
                               : 'bg-gray-400'
                           }`}
                           animate={{
-                            scale: activeSection === item.id ? [1, 1.3, 1] : 1
+                            scale: !item.isExternal && activeSection === item.id ? [1, 1.3, 1] : 1
                           }}
                           transition={{
                             duration: 1,
-                            repeat: activeSection === item.id ? Infinity : 0,
+                            repeat: !item.isExternal && activeSection === item.id ? Infinity : 0,
                             ease: "easeInOut"
                           }}
                         />
