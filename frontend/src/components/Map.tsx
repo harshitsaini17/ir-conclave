@@ -192,7 +192,7 @@ const GoogleMapLocation = () => {
                 </motion.a>
                 
                 <motion.a
-                  href="https://goo.gl/maps/IITJodhpur"
+                  href="https://www.google.com/maps/dir//Indian+Institute+of+Technology+Jodhpur,+NH+62,+Surpura+Bypass+Rd,+Karwar,+Rajasthan+342030"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold shadow-lg transition-all duration-300 font-quicksand"
