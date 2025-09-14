@@ -16,7 +16,7 @@ const WelcomeMessage = () => {
         
         <div className="flex flex-col lg:flex-row gap-12 items-start">
           {/* Left side - Photo */}
-          <div className="lg:w-1/3 flex justify-center lg:justify-start">
+          <div className="w-full lg:w-1/3 flex justify-center lg:justify-start">
             <div className="relative w-80 h-96 rounded-2xl overflow-hidden shadow-lg border-4 border-gray-200">
               <div className="relative w-full h-full bg-white rounded-2xl overflow-hidden">
                 <Image
