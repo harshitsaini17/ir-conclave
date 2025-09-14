@@ -102,9 +102,9 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
       <div className="flex relative z-10">
         {/* Left Image Section - 20% */}
         <motion.div 
-          className="w-1/5 h-64 relative flex-shrink-0"
+          className="w-2/5 lg:w-1/5 h-64 relative flex-shrink-0"
           variants={imageVariants}
-        >
+        > 
           <motion.div
             className="w-full h-full rounded-l-3xl overflow-hidden relative"
             style={{
@@ -173,13 +173,13 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
 
         {/* Right Content Section - 80% */}
         <motion.div 
-          className="w-4/5 py-6 relative flex items-center"
+          className="w-4/5 py-0 lg:py-5 relative flex items-center"
           variants={contentVariants}
         >
           <div className="relative w-full h-full flex items-center">
             {/* Enhanced Background College Image */}
             <motion.div
-              className="absolute inset-0 bg-no-repeat bg-center mr-24 opacity-8 group-hover:opacity-15"
+              className="absolute inset-0 bg-no-repeat w-full bg-left lg:bg-center mr-24 opacity-8 group-hover:opacity-15"
               style={{
                 backgroundImage: `url(${getCollegeBackground(member.role)})`,
                 backgroundSize: 'auto 70%',
