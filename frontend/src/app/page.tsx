@@ -220,7 +220,7 @@ const IITInternationalRelationsConclave = () => {
           className="mb-16"
         >
           <h2 
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2 leading-16"
             style={{
               background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
               backgroundClip: 'text',
@@ -250,7 +250,7 @@ const IITInternationalRelationsConclave = () => {
           id="participants"
         >
           <h2 
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center font-exo2 leading-16"
             style={{
               background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
               backgroundClip: 'text',
@@ -263,7 +263,7 @@ const IITInternationalRelationsConclave = () => {
           
           {/* Grid layout for 3 cards per row */}
           <div 
-            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3"
           >
             {participants.map((member, index) => (
               <div
