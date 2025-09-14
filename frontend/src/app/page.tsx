@@ -196,23 +196,23 @@ const IITInternationalRelationsConclave = () => {
       </div>
 
       <Navbar />
-      <Carousel />
-      
-      {/* Welcome Section */}
-      <WelcomeMessage />
-
       {/* Poster Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16 relative z-10">
+      <section className="w-full mx-auto pt-24 relative z-10">
         <div className="flex justify-center">
           <Image 
             src="/images/poster.png" 
             alt="Conference Poster" 
             width={1200}
             height={800}
-            className="w-full max-w-7xl h-auto rounded-2xl shadow-2xl"
+            className="w-full h-auto rounded-2xl shadow-2xl"
           />
         </div>
       </section>
+      
+      {/* Welcome Section */}
+      <WelcomeMessage />
+      <Carousel />
+
       
       <div 
         className="max-w-7xl mx-auto px-4 py-12 relative z-10"
