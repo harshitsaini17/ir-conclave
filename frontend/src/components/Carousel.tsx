@@ -150,9 +150,9 @@ const Carousel = () => {
         <div 
           className="text-center text-white px-6 max-w-5xl p-8 rounded-3xl relative"
           style={{
-            background: 'rgba(255, 255, 255, 0.1)',
+            background: 'rgba(255, 255, 255, 0.51)',
             backdropFilter: 'blur(20px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
+            border: '1px solid rgba(255, 255, 255, 0.32)',
             boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
           }}
         >
@@ -165,7 +165,7 @@ const Carousel = () => {
               ease: [0.4, 0, 0.2, 1]
             }}
             style={{
-              background: '#0C2E8A',
+              background: '#4DA8DA',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
@@ -251,7 +251,7 @@ const Carousel = () => {
             }`}
             style={{
               background: index === currentSlide 
-                ? 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
+                ? ' #FFBC4C'
                 : 'rgba(255, 255, 255, 0.5)',
               backdropFilter: 'blur(10px)',
               border: '1px solid rgba(255, 255, 255, 0.3)'

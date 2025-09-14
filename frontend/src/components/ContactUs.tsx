@@ -55,7 +55,7 @@ const ContactUs = () => {
               variants={itemVariants}
               transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
               style={{
-                background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
+                background: '#F47B20',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text'
@@ -177,7 +177,7 @@ const ContactUs = () => {
               <motion.h3 
                 className="text-2xl font-bold mb-4 font-exo2"
                 style={{
-                  background: 'linear-gradient(135deg, #0C2E8A, #F47B20, #FFBC4C)',
+                  background: '#F47B20',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
@@ -200,6 +200,38 @@ const ContactUs = () => {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                     <span>02912801021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div 
+            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20"
+            variants={itemVariants}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+            whileHover={{ y: -5 }}
+          >
+            <div className="text-center">
+              <motion.h3 
+                className="text-2xl font-bold mb-4 font-exo2"
+                style={{
+                  background: '#F47B20',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                Office of International Relations
+              </motion.h3>
+              <div className="space-y-3">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600 font-quicksand">
+                  
+                  <div className="flex items-center gap-2">
+                    <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span>0291-280-1115/1596/1034/1037</span>
                   </div>
                 </div>
               </div>
