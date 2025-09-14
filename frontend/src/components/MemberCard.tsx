@@ -11,10 +11,9 @@ interface Member {
 
 interface MemberCardProps {
   member: Member;
-  index?: number;
 }
 
-const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
+const MemberCard = ({ member }: MemberCardProps) => {
   const [imageError, setImageError] = useState(false);
 
   // Get college background image based on institution

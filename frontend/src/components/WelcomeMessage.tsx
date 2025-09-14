@@ -50,7 +50,7 @@ const WelcomeMessage = () => {
                 </p>
                 
                 <p className="mb-6 text-justify leading-relaxed">
-                  IIT Jodhpur is honored to serve as the organizing institute for this prestigious conclave, bringing together academic representatives to engage in meaningful dialogue on the present status and future of international collaboration. This event reflects our deep commitment to fostering a globally connected academic ecosystem and advancing India's role in shaping the international education and research landscape.
+                  IIT Jodhpur is honored to serve as the organizing institute for this prestigious conclave, bringing together academic representatives to engage in meaningful dialogue on the present status and future of international collaboration. This event reflects our deep commitment to fostering a globally connected academic ecosystem and advancing India&apos;s role in shaping the international education and research landscape.
                 </p>
                 
                 <p className="mb-6 text-justify leading-relaxed">

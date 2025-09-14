@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import MemberCard from '@/components/MemberCard'
@@ -203,9 +204,11 @@ const IITInternationalRelationsConclave = () => {
       {/* Poster Section */}
       <section className="max-w-7xl mx-auto px-4 py-16 relative z-10">
         <div className="flex justify-center">
-          <img 
+          <Image 
             src="/images/poster.png" 
             alt="Conference Poster" 
+            width={1200}
+            height={800}
             className="w-full max-w-7xl h-auto rounded-2xl shadow-2xl"
           />
         </div>
@@ -239,7 +242,7 @@ const IITInternationalRelationsConclave = () => {
               <div
                 key={index}
               >
-                <PanelMemberCard member={member} index={index} />
+                <PanelMemberCard member={member} />
               </div>
             ))}
           </div>
@@ -269,7 +272,7 @@ const IITInternationalRelationsConclave = () => {
               <div
                 key={index}
               >
-                <MemberCard member={member} index={index} />
+                <MemberCard member={member} />
               </div>
             ))}
           </div>
