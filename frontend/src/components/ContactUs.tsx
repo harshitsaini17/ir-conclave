@@ -261,15 +261,23 @@ const ContactUs = () => {
               </motion.h3>
               
               {/* Head and Mentor */}
-              <div className="mb-6">
+              <div className="mb-6 p-4 bg-gray-50/50 rounded-xl">
                 <h4 className="text-lg font-semibold text-gray-700 mb-3 font-quicksand">Head & Mentor</h4>
-                <div className="flex justify-center items-center flex-col gap-3 text-gray-600 font-quicksand">
-                  <span className="font-medium">Om Kumar</span>
-                  <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                    <span>+91 72061 66551</span>
+                <div className="text-center space-y-2">
+                  <p className="font-medium text-gray-700 font-quicksand text-lg">Om Kumar</p>
+                  <div className="flex flex-col justify-center items-center gap-3 text-gray-600 font-quicksand">
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                      <span>+91 72061 66551</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                      </svg>
+                      <span className="text-sm">b22cs081@iitj.ac.in</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -279,17 +287,25 @@ const ContactUs = () => {
                 <h4 className="text-lg font-semibold text-gray-700 mb-4 font-quicksand">Overall Coordinators</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   {[
-                    { name: "Agam Harpreet Singh", phone: "+91 98217 72005" },
-                    { name: "Ishan Shah", phone: "+91 93586 97432" },
-                    { name: "Sarthak Kolekar", phone: "+91 96995 27676" }
+                    { name: "Agam Harpreet Singh", phone: "+91 98217 72005", email: "b23cm1004@iitj.ac.in" },
+                    { name: "Ishan Shah", phone: "+91 93586 97432", email: "b23cm1050@iitj.ac.in" },
+                    { name: "Sarthak Kolekar", phone: "+91 96995 27676", email: "b23cs1065@iitj.ac.in" }
                   ].map((coordinator, index) => (
-                    <div key={index} className="text-center space-y-2">
+                    <div key={index} className="text-center space-y-3 p-4 bg-gray-50/30 rounded-lg">
                       <p className="font-medium text-gray-700 font-quicksand">{coordinator.name}</p>
-                      <div className="flex items-center justify-center gap-2 text-gray-600 font-quicksand">
-                        <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <span className="text-sm">{coordinator.phone}</span>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-center gap-2 text-gray-600 font-quicksand">
+                          <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                          </svg>
+                          <span className="text-sm">{coordinator.phone}</span>
+                        </div>
+                        <div className="flex items-center justify-center gap-2 text-gray-600 font-quicksand">
+                          <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                          </svg>
+                          <span className="text-xs">{coordinator.email}</span>
+                        </div>
                       </div>
                     </div>
                   ))}
