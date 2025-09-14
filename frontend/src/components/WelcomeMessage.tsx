@@ -33,11 +33,11 @@ const WelcomeMessage = () => {
           <div className="lg:w-2/3 space-y-6">
             <div className="p-8 rounded-2xl bg-white border border-gray-200 shadow-sm">
               <div className="text-lg leading-relaxed text-gray-800">
-                <p className="mb-6">
+                {/* <p className="mb-6">
                   <span className="font-semibold text-xl text-gray-900">
                     Dear Colleagues and Guests,
                   </span>
-                </p>
+                </p> */}
                 
                 <p className="mb-6 text-justify leading-relaxed">
                   It is my privilege to welcome you to the{' '}
