@@ -114,8 +114,8 @@ const Carousel = () => {
       <motion.div 
         className="absolute inset-0 z-20"
         style={{
-          background: 'rgba(255, 255, 255, 0.75)', // Semi-transparent white overlay
-          backdropFilter: 'blur(2px)'
+          background: 'rgba(255, 255, 255, 0.80)', // Semi-transparent white overlay
+          // backdropFilter: 'blur(2px)'
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -235,7 +235,7 @@ const Carousel = () => {
               background: index === currentSlide 
                 ? '#F47B20'
                 : 'rgba(0, 0, 0, 0.3)',
-              backdropFilter: 'blur(10px)',
+              // backdropFilter: 'blur(10px)',
               border: '1px solid rgba(0, 0, 0, 0.2)'
             }}
             onClick={() => setCurrentSlide(index)}
