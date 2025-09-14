@@ -6,11 +6,11 @@ const WelcomeMessage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">
-            From the desk of Dr. Ankur Gupta
+            Message from the Director
           </h2>
           <div className="w-32 h-1 mx-auto bg-gray-300 rounded-full" />
           <p className="text-xl md:text-2xl mt-4 font-medium text-gray-700">
-            Dean of International Relations – IR Conclave 2025
+            Indian Institute of Technology Jodhpur – IR Conclave 2025
           </p>
         </div>
         
@@ -20,8 +20,8 @@ const WelcomeMessage = () => {
             <div className="relative w-80 h-96 rounded-2xl overflow-hidden shadow-lg border-4 border-gray-200">
               <div className="relative w-full h-full bg-white rounded-2xl overflow-hidden">
                 <Image
-                  src="/images/p2.jpg"
-                  alt="Dr. Ankur Gupta, Dean of International Relations"
+                  src="/images/p1.jpg"
+                  alt="Prof. Avinash Kumar Agarwal, Director, IIT Jodhpur"
                   fill
                   className="object-cover"
                 />
@@ -35,47 +35,38 @@ const WelcomeMessage = () => {
               <div className="text-lg leading-relaxed text-gray-800">
                 <p className="mb-6">
                   <span className="font-semibold text-xl text-gray-900">
-                    Dear Esteemed Guests and Participants,
+                    Dear Colleagues and Guests,
                   </span>
                 </p>
                 
                 <p className="mb-6 text-justify leading-relaxed">
-                  It is with immense pleasure that I welcome you to the{' '}
+                  It is my privilege to welcome you to the{' '}
                   <span className="font-semibold text-gray-900">
                     All IIT International Relations Conclave 2025
                   </span>, being organized at the{' '}
                   <span className="font-semibold text-gray-900">
-                    Indian Institute of Technology Jodhpur on 03-04 October 2025
+                    Indian Institute of Technology Jodhpur on 03–04 October 2025
                   </span>.
                 </p>
                 
                 <p className="mb-6 text-justify leading-relaxed">
-                  This conclave marks a significant milestone in our ongoing efforts to foster global academic collaboration, 
-                  interdisciplinary dialogue, and innovation-driven partnerships. We are honored to host distinguished speakers, 
-                  scholars, and professionals who bring with them a wealth of experience and insight. Your presence enriches the spirit 
-                  of this gathering and strengthens our shared commitment to advancing international engagement in higher 
-                  education and research.
+                  IIT Jodhpur is honored to serve as the organizing institute for this prestigious conclave, bringing together academic representatives to engage in meaningful dialogue on the present status and future of international collaboration. This event reflects our deep commitment to fostering a globally connected academic ecosystem and advancing India's role in shaping the international education and research landscape.
                 </p>
                 
                 <p className="mb-6 text-justify leading-relaxed">
-                  Over the course of these two days, we look forward to thought-provoking discussions, meaningful networking, and 
-                  the forging of new alliances that will shape the future of international relations in academia and beyond.
+                  As an institution, IIT Jodhpur remains steadfast in its mission to nurture international relations through strategic partnerships, student and faculty mobility, and collaborative research initiatives. The IR Conclave 2025 is a vital step in strengthening these efforts, offering a platform to share best practices, explore new opportunities, and build enduring relationships across borders.
                 </p>
                 
                 <p className="mb-8 text-justify leading-relaxed">
-                  On behalf of{' '}
-                  <span className="font-semibold text-gray-900">
-                    IIT Jodhpur
-                  </span>, I extend my heartfelt gratitude to each of you for joining us and contributing to the success 
-                  of this conclave. We hope your time here is intellectually rewarding and personally memorable.
+                  We are confident that the discussions and connections formed during this conclave will contribute to a more inclusive and innovative global academic landscape. I extend my sincere appreciation to all attendees for your presence and participation, and I look forward to the impactful outcomes this gathering will inspire.
                 </p>
                 
                 <div className="space-y-2 p-6 rounded-xl bg-gray-100 border border-gray-200">
-                  <p className="font-medium text-gray-700">Warm regards,</p>
+                  <p className="font-medium text-gray-700">With warm regards,</p>
                   <p className="font-bold text-xl text-gray-900">
-                    Dr. Ankur Gupta
+                    Prof. Avinash Kumar Agarwal
                   </p>
-                  <p className="font-medium text-gray-700">Dean, International Relations</p>
+                  <p className="font-medium text-gray-700">Director</p>
                   <p className="font-medium text-gray-700">Indian Institute of Technology Jodhpur</p>
                 </div>
               </div>
