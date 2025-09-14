@@ -229,9 +229,9 @@ const Navbar = () => {
               className="xl:hidden overflow-hidden"
             >
               <motion.nav 
-                className="mt-6 p-4 rounded-2xl"
+                className="mt-6 p-4 rounded-2xl "
                 style={{
-                  background: 'rgba(255, 245, 205, 0.3)',
+                  background: 'rgba(255, 245, 205, 0.83)',
                   backdropFilter: 'blur(15px)',
                   border: '1px solid rgba(255, 255, 255, 0.2)'
                 }}
@@ -244,7 +244,7 @@ const Navbar = () => {
                     key={index}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href, item.id, item.isExternal)}
-                    className={`block py-3 px-4 font-medium rounded-lg transition-all duration-300 relative ${
+                    className={`block py-3 px-4 font-bold rounded-lg transition-all duration-300 relative ${
                       !item.isExternal && activeSection === item.id
                         ? 'text-blue-700 font-semibold bg-white/10'
                         : 'text-gray-700 hover:text-blue-600 hover:bg-white/10'
@@ -256,7 +256,7 @@ const Navbar = () => {
                   >
                     <span className="flex items-center justify-between">
                       <span className="flex items-center space-x-3">
-                        <motion.span 
+                        {/* <motion.span 
                           className={`w-2 h-2 rounded-full ${
                             !item.isExternal && activeSection === item.id 
                               ? 'bg-blue-600' 
@@ -270,7 +270,7 @@ const Navbar = () => {
                             repeat: !item.isExternal && activeSection === item.id ? Infinity : 0,
                             ease: "easeInOut"
                           }}
-                        />
+                        /> */}
                         {item.label}
                       </span>
                       <motion.svg 
