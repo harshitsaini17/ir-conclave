@@ -106,7 +106,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
           variants={imageVariants}
         > 
           <motion.div
-            className="w-full h-full rounded-l-3xl overflow-hidden relative"
+            className="w-full h-full rounded-3xl overflow-hidden relative"
             style={{
               background: 'linear-gradient(135deg, #0C2E8A 0%, #F47B20 100%)',
               padding: '3px'
@@ -114,7 +114,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-full h-full bg-white rounded-l-3xl overflow-hidden relative">
+            <div className="w-full h-full bg-white rounded-3xl overflow-hidden relative">
               {!imageError && member.image ? (
                 <motion.div className="relative w-full h-full">
                   <Image

@@ -104,7 +104,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
           variants={imageVariants}
         >
           <motion.div
-            className="absolute inset-0 rounded-l-2xl"
+            className="absolute inset-0 rounded-2xl "
             style={{
               background: 'linear-gradient(135deg, #0C2E8A 0%, #F5E9DC 50%, #F47B20 100%)',
               padding: '2px'
@@ -112,7 +112,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="w-full h-full bg-white rounded-l-2xl overflow-hidden relative">
+            <div className="w-full h-full bg-white rounded-2xl overflow-hidden relative">
               {!imageError && member.image ? (
                 <motion.div className="relative w-full h-full">
                   <Image
