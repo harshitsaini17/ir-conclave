@@ -32,7 +32,7 @@ const IITInternationalRelationsConclave = () => {
     {
       name: 'Dr Sanjeev Kumar Varshney',
       role: 'Former Adviser & Head, International Scientific Cooperation, Department of Science & Technology, Government of India',
-      image: '/images/4.png'
+      image: '/images/4.jpg'
     },
   {
     name: 'Shikha Sinha',
