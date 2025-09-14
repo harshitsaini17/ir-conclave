@@ -120,14 +120,9 @@ const Navbar = () => {
               </div>
             </motion.div>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Simplified */}
             <motion.nav 
-              className="hidden xl:flex items-center space-x-2 p-2 rounded-2xl"
-              style={{
-                background: 'rgba(255, 255, 255, 0.1)',
-                backdropFilter: 'blur(10px)',
-                border: '1px solid rgba(255, 255, 255, 0.2)'
-              }}
+              className="hidden xl:flex items-center space-x-1"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -137,14 +132,14 @@ const Navbar = () => {
                   key={index}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href, item.id, item.isExternal)}
-                  className={`relative px-4 py-2.5 text-sm font-medium rounded-xl transition-all duration-300 font-quicksand ${
+                  className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 font-quicksand relative ${
                     !item.isExternal && activeSection === item.id
-                      ? 'text-white'
-                      : 'text-gray-700 hover:text-gray-900'
+                      ? 'text-blue-700 font-semibold'
+                      : 'text-gray-700 hover:text-blue-600 hover:bg-white/20'
                   }`}
                   whileHover={{ 
                     scale: 1.05,
-                    y: -2
+                    y: -1
                   }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
@@ -158,28 +153,14 @@ const Navbar = () => {
                     {item.label}
                   </motion.span>
                   
-                  {/* Animated background for hover */}
-                  <motion.div
-                    className="absolute inset-0 rounded-xl"
-                    style={{
-                      background: 'linear-gradient(135deg, #FFBC4C, #F47B20)',
-                      opacity: 0
-                    }}
-                    whileHover={{ opacity: 0.8 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                  
-                  {/* Active indicator - only for internal links */}
+                  {/* Simple underline for active state */}
                   <AnimatePresence>
                     {!item.isExternal && activeSection === item.id && (
                       <motion.div
-                        className="absolute inset-0 rounded-xl"
-                        style={{
-                          background: 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
-                        }}
-                        initial={{ scale: 0, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 0.9 }}
-                        exit={{ scale: 0, opacity: 0 }}
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full"
+                        initial={{ scaleX: 0, opacity: 0 }}
+                        animate={{ scaleX: 1, opacity: 1 }}
+                        exit={{ scaleX: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
                       />
                     )}
@@ -237,7 +218,7 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Simplified */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -263,40 +244,29 @@ const Navbar = () => {
                     key={index}
                     href={item.href}
                     onClick={(e) => handleNavClick(e, item.href, item.id, item.isExternal)}
-                    className={`block py-3 px-4 font-medium rounded-xl transition-all duration-300 relative overflow-hidden ${
+                    className={`block py-3 px-4 font-medium rounded-lg transition-all duration-300 relative ${
                       !item.isExternal && activeSection === item.id
-                        ? 'text-white'
-                        : 'text-gray-700'
+                        ? 'text-blue-700 font-semibold bg-white/10'
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-white/10'
                     }`}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1, duration: 0.3 }}
                     whileHover={{ x: 5 }}
                   >
-                    <motion.div
-                      className="absolute inset-0 rounded-xl"
-                      style={{
-                        background: !item.isExternal && activeSection === item.id 
-                          ? 'linear-gradient(135deg, #0C2E8A, #FFBC4C)'
-                          : 'linear-gradient(135deg, #F47B20, #FFBC4C)',
-                        opacity: !item.isExternal && activeSection === item.id ? 0.9 : 0
-                      }}
-                      whileHover={{ opacity: 0.6 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                    <span className="relative z-10 flex items-center justify-between">
+                    <span className="flex items-center justify-between">
                       <span className="flex items-center space-x-3">
                         <motion.span 
                           className={`w-2 h-2 rounded-full ${
                             !item.isExternal && activeSection === item.id 
-                              ? 'bg-white' 
+                              ? 'bg-blue-600' 
                               : 'bg-gray-400'
                           }`}
                           animate={{
-                            scale: !item.isExternal && activeSection === item.id ? [1, 1.3, 1] : 1
+                            scale: !item.isExternal && activeSection === item.id ? [1, 1.2, 1] : 1
                           }}
                           transition={{
-                            duration: 1,
+                            duration: 2,
                             repeat: !item.isExternal && activeSection === item.id ? Infinity : 0,
                             ease: "easeInOut"
                           }}
