@@ -122,7 +122,7 @@ const IITInternationalRelationsConclave = () => {
   {
     name: 'Ms. Chandrika Naik',
     role: 'MoU Lead and Coordinator for Outgoing students, Office of International Relations, IIT Bombay',
-    image: '/images/m1.png'
+    image: '/images/m1.jpg'
   },
   {
     name: 'Prof. Rohit Sharma',
@@ -177,7 +177,7 @@ const IITInternationalRelationsConclave = () => {
   {
     name: 'Dr. Nutan Kumar Tomar',
     role: 'Associate Dean, Resource, IIT Patna',
-    image: '/images/62.jpg'
+    image: '/images/m2.jpg'
   }
 ];
 
