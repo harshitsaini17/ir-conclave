@@ -132,7 +132,7 @@ const Navbar = () => {
                   key={index}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href, item.id, item.isExternal)}
-                  className={`px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-300 font-quicksand relative ${
+                  className={`px-4 py-2.5 text-sm font-bold rounded-lg transition-all duration-300 font-quicksand relative ${
                     !item.isExternal && activeSection === item.id
                       ? 'text-blue-700 font-semibold'
                       : 'text-gray-700 hover:text-blue-600 hover:bg-white/20'

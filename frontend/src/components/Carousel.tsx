@@ -135,7 +135,7 @@ const Carousel = () => {
         >
           {/* Fixed Title */}
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight font-exo2"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-exo2 flex flex-col whitespace-pre-line"
             variants={textVariants}
             transition={{
               duration: 0.8,
@@ -148,7 +148,7 @@ const Carousel = () => {
               color: 'transparent',
             }}
           >
-            {fixedContent.title}
+            All IITs<br /> International Relations Conclave <br /> 2025
           </motion.h1>
           
           {/* Fixed Subtitle */}
