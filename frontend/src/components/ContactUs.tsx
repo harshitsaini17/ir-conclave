@@ -166,9 +166,9 @@ const ContactUs = () => {
             ))}
           </motion.div>
 
-          {/* Dean Contact Information - FIXED */}
+          {/* Dean Contact Information */}
           <motion.div 
-            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20"
+            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20 mb-8"
             variants={itemVariants}
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
             whileHover={{ y: -5 }}
@@ -205,10 +205,12 @@ const ContactUs = () => {
               </div>
             </div>
           </motion.div>
+
+          {/* Office of International Relations */}
           <motion.div 
-            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20"
+            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20 mb-8"
             variants={itemVariants}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.5 }}
             whileHover={{ y: -5 }}
           >
             <div className="text-center">
@@ -226,13 +228,71 @@ const ContactUs = () => {
               </motion.h3>
               <div className="space-y-3">
                 <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600 font-quicksand">
-                  
                   <div className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                     <span>0291-280-1115/1596/1034/1037</span>
                   </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Student Team Section */}
+          <motion.div 
+            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20"
+            variants={itemVariants}
+            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.6 }}
+            whileHover={{ y: -5 }}
+          >
+            <div className="text-center">
+              <motion.h3 
+                className="text-2xl font-bold mb-6 font-exo2"
+                style={{
+                  background: 'linear-gradient(135deg, #F47B20)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                Student Team
+              </motion.h3>
+              
+              {/* Head and Mentor */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-gray-700 mb-3 font-quicksand">Head & Mentor</h4>
+                <div className="flex justify-center items-center gap-3 text-gray-600 font-quicksand">
+                  <span className="font-medium">Om Kumar</span>
+                  <div className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <span>+91 72061 66551</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Overall Coordinators */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-700 mb-4 font-quicksand">Overall Coordinators</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {[
+                    { name: "Agam Harpreet Singh", phone: "+91 98217 72005" },
+                    { name: "Ishan Shah", phone: "+91 93586 97432" },
+                    { name: "Sarthak Kolekar", phone: "+91 96995 27676" }
+                  ].map((coordinator, index) => (
+                    <div key={index} className="text-center space-y-2">
+                      <p className="font-medium text-gray-700 font-quicksand">{coordinator.name}</p>
+                      <div className="flex items-center justify-center gap-2 text-gray-600 font-quicksand">
+                        <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        <span className="text-sm">{coordinator.phone}</span>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
