@@ -31,23 +31,31 @@ const Navbar = () => {
   ]
 
   const handleNavClick = (e: React.MouseEvent, href: string, id: string, isExternal: boolean) => {
-    setIsMenuOpen(false)
+    e.preventDefault()
     
     if (isExternal) {
-      // For external links, prevent default behavior and open in new tab
-      e.preventDefault()
+      // For external links, open in new tab
       window.open(href, '_blank', 'noopener noreferrer')
+      setIsMenuOpen(false)
     } else {
-      // For internal links, prevent default and smooth scroll
-      e.preventDefault()
+      // For internal links, close menu first then scroll after a delay
+      setIsMenuOpen(false)
       setActiveSection(id)
-      const element = document.querySelector(href)
-      if (element) {
-        element.scrollIntoView({ 
-          behavior: 'smooth',
-          block: 'start'
-        })
-      }
+      
+      // Add delay to allow menu animation to complete before scrolling
+      setTimeout(() => {
+        const element = document.querySelector(href)
+        if (element) {
+          const headerHeight = 100 // Approximate navbar height
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+          const offsetPosition = elementPosition - headerHeight
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
+      }, 300) // 300ms delay to allow menu close animation
     }
   }
 
@@ -256,21 +264,6 @@ const Navbar = () => {
                   >
                     <span className="flex items-center justify-between">
                       <span className="flex items-center space-x-3">
-                        {/* <motion.span 
-                          className={`w-2 h-2 rounded-full ${
-                            !item.isExternal && activeSection === item.id 
-                              ? 'bg-blue-600' 
-                              : 'bg-gray-400'
-                          }`}
-                          animate={{
-                            scale: !item.isExternal && activeSection === item.id ? [1, 1.2, 1] : 1
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: !item.isExternal && activeSection === item.id ? Infinity : 0,
-                            ease: "easeInOut"
-                          }}
-                        /> */}
                         {item.label}
                       </span>
                       <motion.svg 

@@ -176,7 +176,7 @@ const MemberCard = ({ member, index = 0 }: MemberCardProps) => {
           <div className="relative w-full h-full flex items-center">
             {/* Animated Background College Image */}
             <motion.div
-              className="absolute inset-0 bg-no-repeat bg-center mr-24 opacity-5 group-hover:opacity-10"
+              className="absolute inset-0 bg-no-repeat w-full bg-left lg:bg-center mr-0 ml-4 lg:mr-24 opacity-5 group-hover:opacity-10"
               style={{
                 backgroundImage: `url(${getCollegeBackground(member.role)})`,
                 backgroundSize: 'auto 70%',

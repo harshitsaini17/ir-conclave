@@ -179,7 +179,7 @@ const PanelMemberCard = ({ member, index = 0 }: PanelMemberCardProps) => {
           <div className="relative w-full h-full flex items-center">
             {/* Enhanced Background College Image */}
             <motion.div
-              className="absolute inset-0 bg-no-repeat w-full bg-left lg:bg-center mr-24 opacity-8 group-hover:opacity-15"
+              className="absolute inset-0 bg-no-repeat w-full bg-left lg:bg-center mr-0 lg:mr-24 opacity-8 group-hover:opacity-15"
               style={{
                 backgroundImage: `url(${getCollegeBackground(member.role)})`,
                 backgroundSize: 'auto 70%',
