@@ -342,7 +342,7 @@ const Footer = () => {
                   © 2025 Indian Institute of Technology Jodhpur. All rights reserved.
                 </p>
               </motion.div>
-              <motion.div 
+              {/* <motion.div 
                 className="flex space-x-6 text-xs"
                 initial={{ x: 30, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -370,7 +370,7 @@ const Footer = () => {
                     />
                   </motion.a>
                 ))}
-              </motion.div>
+              </motion.div> */}
             </div>
           </motion.div>
         </motion.div>
