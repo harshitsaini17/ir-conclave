@@ -197,7 +197,7 @@ const IITInternationalRelationsConclave = () => {
 
       <Navbar />
       {/* Poster Section */}
-      <section className="w-full mx-auto pt-28 lg:px-12 xl:px-54 relative z-10">
+      <section className="w-full mx-auto pt-32 pb-12 lg:px-12 xl:px-54 relative z-10">
         <div className="flex justify-center">
           <Image 
             src="/images/poster.png" 
