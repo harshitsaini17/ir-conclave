@@ -204,7 +204,7 @@ const IITInternationalRelationsConclave = () => {
             alt="Conference Poster" 
             width={1200}
             height={800}
-            className="w-full h-auto rounded-2xl shadow-2xl"
+            className="w-full h-auto shadow-2xl"
           />
         </div>
       </section>
