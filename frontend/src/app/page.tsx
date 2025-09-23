@@ -158,7 +158,7 @@ const IITInternationalRelationsConclave = () => {
   {
     name: 'Ms. Chandan Sharma',
     role: 'Senior Superintendent, Office of International Relations, IIT Mandi',
-    image: '/images/55.jpg'
+    image: '/images/m5.jpg'
   },
   {
     name: 'Prof. Prabhat Kumar Upadhyay',
