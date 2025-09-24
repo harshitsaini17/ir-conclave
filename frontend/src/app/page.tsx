@@ -36,12 +36,12 @@ const IITInternationalRelationsConclave = () => {
       image: '/images/4.jpg'
     },
   {
-    name: 'Shikha Sinha',
+    name: 'Mrs. Shikha Sinha',
     role: 'Senior Advisor- International Cooperation, DAAD Regional Office, New Delhi',
     image: '/images/5.jpg'
   },
   {
-    name: 'Apoorv Mahendru',
+    name: 'Mr. Apoorv Mahendru',
     role: 'Deputy Director and Head -- Marketing, DAAD Regional Office, New Delhi',
     image: '/images/7.jpg'
   },
