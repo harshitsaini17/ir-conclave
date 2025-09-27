@@ -7,8 +7,8 @@ const ContactUs = () => {
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
+        duration: 0.4,
+        staggerChildren: 0.1
       }
     }
   }
@@ -30,13 +30,13 @@ const ContactUs = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-slate-50/50 via-blue-50/50 to-indigo-100/50 relative overflow-hidden">
+    <section id="contact" className="py-12 md:py-20 bg-gradient-to-br from-slate-50/50 via-blue-50/50 to-indigo-100/50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_800px_at_100%_200px,rgba(183,224,255,0.1),transparent)]"></div>
       <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
       <div className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-br from-yellow-200 to-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
 
-      <motion.div 
+      <div 
         className="container mx-auto px-4"
         variants={containerVariants}
         initial="hidden"
@@ -45,15 +45,15 @@ const ContactUs = () => {
       >
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <motion.div 
+          <div 
             className="text-center mb-12" 
             variants={itemVariants}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
             <motion.h2 
               className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-exo2"
               variants={itemVariants}
-              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               style={{
                 background: '#F47B20',
                 WebkitBackgroundClip: 'text',
@@ -66,15 +66,15 @@ const ContactUs = () => {
             <motion.p 
               className="text-xl text-gray-600 font-medium mb-4 font-quicksand"
               variants={itemVariants}
-              transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
+              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
             >
               Get in touch with the Office of International Relations
             </motion.p>
-          </motion.div>
+          </div>
 
           {/* Contact Cards */}
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+          <div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12"
             variants={containerVariants}
           >
             {[
@@ -103,10 +103,10 @@ const ContactUs = () => {
                 action: "https://maps.google.com/?q=Indian+Institute+of+Technology+Jodhpur"
               }
             ].map((contact, index) => (
-              <motion.div
+              <div
                 key={index}
                 variants={cardVariants}
-                transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: index * 0.1 }}
+                transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: index * 0.05 }}
                 whileHover={{ 
                   y: -8, 
                   scale: 1.05,
@@ -116,7 +116,7 @@ const ContactUs = () => {
                 className="group cursor-pointer"
                 onClick={() => contact.action.startsWith('http') ? window.open(contact.action, '_blank') : window.location.href = contact.action}
               >
-                <div className="glass-card p-8 rounded-2xl h-full backdrop-blur-lg border border-white/20 relative overflow-hidden">
+                <div className="bg-white/80 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 h-full relative overflow-hidden shadow-lg">
                   {/* Decorative gradient */}
                   <div 
                     className="absolute top-0 left-0 w-full h-1 rounded-t-2xl"
@@ -124,7 +124,7 @@ const ContactUs = () => {
                   ></div>
                   
                   {/* Icon */}
-                  <motion.div 
+                  <div 
                     className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto"
                     style={{
                       background: `linear-gradient(135deg, ${contact.color}20, ${contact.color}40)`
@@ -133,7 +133,7 @@ const ContactUs = () => {
                       scale: 1.1,
                       background: `linear-gradient(135deg, ${contact.color}40, ${contact.color}60)`
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.15 }}
                   >
                     <svg 
                       className="w-8 h-8" 
@@ -143,7 +143,7 @@ const ContactUs = () => {
                     >
                       <path d={contact.path}/>
                     </svg>
-                  </motion.div>
+                  </div>
 
                   {/* Content */}
                   <div className="text-center">
@@ -155,22 +155,22 @@ const ContactUs = () => {
                     </h3>
                     <div className="space-y-2">
                       {contact.details.map((detail, i) => (
-                        <p key={i} className="text-gray-600 text-sm leading-relaxed font-quicksand">
+                        <p key={i} className="text-gray-800 md:text-gray-600 text-sm leading-relaxed font-quicksand">
                           {detail}
                         </p>
                       ))}
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* Dean Contact Information */}
-          <motion.div 
-            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20 mb-8"
+          <div 
+            className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 mb-8 shadow-lg"
             variants={itemVariants}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.4 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
             whileHover={{ y: -5 }}
           >
             <div className="text-center">
@@ -187,8 +187,8 @@ const ContactUs = () => {
                 Dean of International Relations (DOIR)
               </motion.h3>
               <div className="space-y-3">
-                <p className="text-lg font-semibold text-gray-700 font-quicksand">Dr. Ankur Gupta</p>
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600 font-quicksand">
+                <p className="text-lg font-semibold text-gray-900 md:text-gray-700 font-quicksand">Dr. Ankur Gupta</p>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-800 md:text-gray-600 font-quicksand">
                   <div className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -210,13 +210,13 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Associate Dean International Connect (ADIC) Contact Information */}
-          <motion.div 
-            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20 mb-8"
+          <div 
+            className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 mb-8 shadow-lg"
             variants={itemVariants}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.45 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.25 }}
             whileHover={{ y: -5 }}
           >
             <div className="text-center">
@@ -233,8 +233,8 @@ const ContactUs = () => {
                 Associate Dean International Connect (ADIC)
               </motion.h3>
               <div className="space-y-3">
-                <p className="text-lg font-semibold text-gray-700 font-quicksand">Dr. Bhivraj Suthar</p>
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600 font-quicksand">
+                <p className="text-lg font-semibold text-gray-900 md:text-gray-700 font-quicksand">Dr. Bhivraj Suthar</p>
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-800 md:text-gray-600 font-quicksand">
                   <div className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -250,13 +250,13 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Office of International Relations */}
-          <motion.div 
-            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20 mb-8"
+          <div 
+            className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 mb-8 shadow-lg"
             variants={itemVariants}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.5 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
             whileHover={{ y: -5 }}
           >
             <div className="text-center">
@@ -273,7 +273,7 @@ const ContactUs = () => {
                 Office of International Relations
               </motion.h3>
               <div className="space-y-3">
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-600 font-quicksand">
+                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-gray-800 md:text-gray-600 font-quicksand">
                   <div className="flex items-center gap-2">
                     <svg className="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
@@ -283,13 +283,13 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Student Team Section */}
-          <motion.div 
-            className="glass-card p-8 rounded-2xl backdrop-blur-lg border border-white/20"
+          <div 
+            className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 shadow-lg"
             variants={itemVariants}
-            transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1], delay: 0.6 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.35 }}
             whileHover={{ y: -5 }}
           >
             <div className="text-center">
@@ -358,9 +358,9 @@ const ContactUs = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };

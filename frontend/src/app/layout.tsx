@@ -72,6 +72,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${exo2.variable} ${quicksand.variable} antialiased font-quicksand`}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>
