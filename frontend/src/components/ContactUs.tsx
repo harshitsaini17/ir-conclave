@@ -38,21 +38,21 @@ const ContactUs = () => {
 
       <div 
         className="container mx-auto px-4"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+       // variants={containerVariants}
+        // initial="hidden"
+        // whileInView="visible"
+        // viewport={{ once: true, amount: 0.3 }}
       >
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div 
             className="text-center mb-12" 
-            variants={itemVariants}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+           // variants={itemVariants}
+            // transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
           >
             <motion.h2 
               className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 font-exo2"
-              variants={itemVariants}
+             // variants={itemVariants}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
               style={{
                 background: '#F47B20',
@@ -65,7 +65,7 @@ const ContactUs = () => {
             </motion.h2>
             <motion.p 
               className="text-xl text-gray-600 font-medium mb-4 font-quicksand"
-              variants={itemVariants}
+             // variants={itemVariants}
               transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.1 }}
             >
               Get in touch with the Office of International Relations
@@ -75,7 +75,7 @@ const ContactUs = () => {
           {/* Contact Cards */}
           <div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12"
-            variants={containerVariants}
+           // variants={containerVariants}
           >
             {[
               {
@@ -105,14 +105,14 @@ const ContactUs = () => {
             ].map((contact, index) => (
               <div
                 key={index}
-                variants={cardVariants}
-                transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: index * 0.05 }}
-                whileHover={{ 
-                  y: -8, 
-                  scale: 1.05,
-                  boxShadow: `0 20px 40px ${contact.color}30`
-                }}
-                whileTap={{ scale: 0.98 }}
+               // variants={cardVariants}
+                // transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: index * 0.05 }}
+                // whileHover={{ 
+                //   y: -8, 
+                //   scale: 1.05,
+                //   boxShadow: `0 20px 40px ${contact.color}30`
+                // }}
+                // whileTap={{ scale: 0.98 }}
                 className="group cursor-pointer"
                 onClick={() => contact.action.startsWith('http') ? window.open(contact.action, '_blank') : window.location.href = contact.action}
               >
@@ -129,11 +129,11 @@ const ContactUs = () => {
                     style={{
                       background: `linear-gradient(135deg, ${contact.color}20, ${contact.color}40)`
                     }}
-                    whileHover={{
-                      scale: 1.1,
-                      background: `linear-gradient(135deg, ${contact.color}40, ${contact.color}60)`
-                    }}
-                    transition={{ duration: 0.15 }}
+                    // whileHover={{
+                    //   scale: 1.1,
+                    //   background: `linear-gradient(135deg, ${contact.color}40, ${contact.color}60)`
+                    // }}
+                    // transition={{ duration: 0.15 }}
                   >
                     <svg 
                       className="w-8 h-8" 
@@ -169,9 +169,9 @@ const ContactUs = () => {
           {/* Dean Contact Information */}
           <div 
             className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 mb-8 shadow-lg"
-            variants={itemVariants}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
-            whileHover={{ y: -5 }}
+           // variants={itemVariants}
+            // transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.2 }}
+            // whileHover={{ y: -5 }}
           >
             <div className="text-center">
               <motion.h3 
@@ -215,9 +215,9 @@ const ContactUs = () => {
           {/* Associate Dean International Connect (ADIC) Contact Information */}
           <div 
             className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 mb-8 shadow-lg"
-            variants={itemVariants}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.25 }}
-            whileHover={{ y: -5 }}
+           // variants={itemVariants}
+            // transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.25 }}
+            // whileHover={{ y: -5 }}
           >
             <div className="text-center">
               <motion.h3 
@@ -255,9 +255,9 @@ const ContactUs = () => {
           {/* Office of International Relations */}
           <div 
             className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 mb-8 shadow-lg"
-            variants={itemVariants}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
-            whileHover={{ y: -5 }}
+           // variants={itemVariants}
+            // transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.3 }}
+            // whileHover={{ y: -5 }}
           >
             <div className="text-center">
               <motion.h3 
@@ -288,9 +288,9 @@ const ContactUs = () => {
           {/* Student Team Section */}
           <div 
             className="bg-white/85 md:bg-white/35 backdrop-blur-lg border border-white/40 rounded-2xl p-6 md:p-8 shadow-lg"
-            variants={itemVariants}
-            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.35 }}
-            whileHover={{ y: -5 }}
+           // variants={itemVariants}
+            // transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1], delay: 0.35 }}
+            // whileHover={{ y: -5 }}
           >
             <div className="text-center">
               <motion.h3 
